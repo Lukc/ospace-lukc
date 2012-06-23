@@ -336,14 +336,15 @@ class IGalaxy(IObject):
 					player.techs[techID] = (Rules.techBaseImprovement + Rules.techMaxImprovement) / 2
 			self.cmd(planet).changeOwner(tran, planet, playerID, 1)
 			planet.slots = [
-				Utils.newStructure(tran, Tech.PWRPLANTNUK1, playerID, STRUCT_STATUS_ON),
-				Utils.newStructure(tran, Tech.FARM1, playerID, STRUCT_STATUS_ON),
-				Utils.newStructure(tran, Tech.FARM1, playerID, STRUCT_STATUS_ON),
-				Utils.newStructure(tran, Tech.FARM1, playerID, STRUCT_STATUS_ON),
-				Utils.newStructure(tran, Tech.ANCFACTORY, playerID, STRUCT_STATUS_ON),
-				Utils.newStructure(tran, Tech.ANCFACTORY, playerID, STRUCT_STATUS_ON),
-				Utils.newStructure(tran, Tech.ANCRESLAB, playerID, STRUCT_STATUS_ON),
-				Utils.newStructure(tran, Tech.REPAIR1, playerID, STRUCT_STATUS_ON),
+				Utils.newStructure(tran, Tech.SOLARPOWERPLANT, playerID, STRUCT_STATUS_ON),
+				Utils.newStructure(tran, Tech.SOLARPOWERPLANT, playerID, STRUCT_STATUS_ON),
+				Utils.newStructure(tran, Tech.FARM, playerID, STRUCT_STATUS_ON),
+				Utils.newStructure(tran, Tech.FARM, playerID, STRUCT_STATUS_ON),
+				Utils.newStructure(tran, Tech.FARM, playerID, STRUCT_STATUS_ON),
+				Utils.newStructure(tran, Tech.FACTORY, playerID, STRUCT_STATUS_ON),
+				Utils.newStructure(tran, Tech.FACTORY, playerID, STRUCT_STATUS_ON),
+				Utils.newStructure(tran, Tech.RESEARCHLABORATORY, playerID, STRUCT_STATUS_ON),
+				Utils.newStructure(tran, Tech.SPACEPORT, playerID, STRUCT_STATUS_ON),
 			]
 			planet.storPop = Rules.startingPopulation
 			planet.storBio = Rules.startingBio
@@ -352,18 +353,18 @@ class IGalaxy(IObject):
 			planet.morale = Rules.maxMorale
 			# fleet
 			# add basic ships designs
-			tempTechs = [Tech.FTLENG1, Tech.SCOCKPIT1, Tech.SCANNERMOD1, Tech.CANNON1,
-				Tech.CONBOMB1, Tech.SMALLHULL1, Tech.MEDIUMHULL2, Tech.COLONYMOD2]
+			tempTechs = [Tech.FTLENGINE, Tech.COCKPIT, Tech.SCANNERMOD, Tech.CANNON,
+				Tech.SMALLHULL, Tech.MEDIUMHULL, Tech.COLONYMODULE]
 			for techID in tempTechs:
 				player.techs[techID] = 1
 			dummy, scoutID = tran.gameMngr.cmdPool[T_AIPLAYER].addShipDesign(tran, player, "Scout", Tech.SMALLHULL1,
-				{Tech.FTLENG1:3, Tech.SCOCKPIT1:1, Tech.SCANNERMOD1:1})
+				{Tech.FTLMICROENGINE:3, Tech.COCKPIT:1, Tech.OPTICALSCANNER:1})
 			dummy, fighterID = tran.gameMngr.cmdPool[T_AIPLAYER].addShipDesign(tran, player, "Fighter", Tech.SMALLHULL1,
-				{Tech.FTLENG1:3, Tech.SCOCKPIT1:1, Tech.CANNON1:1})
-			dummy, bomberID = tran.gameMngr.cmdPool[T_AIPLAYER].addShipDesign(tran, player, "Bomber", Tech.SMALLHULL1,
-				{Tech.FTLENG1:3, Tech.SCOCKPIT1:1, Tech.CONBOMB1:1})
+				{Tech.FTLMICROENGINE:3, Tech.COCKPIT:1, Tech.CANNON:1})
+		#	dummy, bomberID = tran.gameMngr.cmdPool[T_AIPLAYER].addShipDesign(tran, player, "Bomber", Tech.SMALLHULL1,
+		#		{Tech.FTLENG1:3, Tech.SCOCKPIT1:1, Tech.CONBOMB1:1})
 			dummy, colonyID = tran.gameMngr.cmdPool[T_AIPLAYER].addShipDesign(tran, player, "Colony Ship", Tech.MEDIUMHULL2,
-				{Tech.FTLENG1:4, Tech.SCOCKPIT1:1, Tech.COLONYMOD2:1})
+				{Tech.FTLMICROENGINE:4, Tech.COCKPIT:1, Tech.COLONYMODULE:1})
 			for techID in tempTechs:
 				del player.techs[techID]
 			# add small fleet
@@ -497,14 +498,14 @@ class IGalaxy(IObject):
 			for planetID in system.planets:
 				planet = tran.db[planetID]
 				# renegades
-				if planet.plStratRes in (SR_TL1A, SR_TL1B) and planet.owner == OID_NONE:
+				if planet.plStratRes in RENEGADES_SR and planet.owner == OID_NONE:
 					# populate planet
 					log.debug("Adding renegades", planetID)
 					self.cmd(planet).changeOwner(tran, planet, players[T_AIRENPLAYER].oid, 1)
 					planet.slots.append(Utils.newStructure(tran, Rules.Tech.RENEGADEBASE, planet.owner))
 					planet.storPop = 3000
 				# pirates
-				if planet.plStratRes in (SR_TL3A, SR_TL3B, SR_TL3C) and planet.owner == OID_NONE:
+				if planet.plStratRes in PIRATES_SR and planet.owner == OID_NONE:
 					# populate planet
 					log.debug("Adding pirates", planetID)
 					self.cmd(planet).changeOwner(tran, planet, players[T_AIPIRPLAYER].oid, 1)
@@ -514,7 +515,7 @@ class IGalaxy(IObject):
 						planet.slots.append(Utils.newStructure(tran, Rules.Tech.PIRATEDEN, planet.owner))
 						planet.storPop += 1000
 				# EDEN
-				if planet.plStratRes in (SR_TL5A, SR_TL5B, SR_TL5C) and planet.owner == OID_NONE:
+				if planet.plStratRes in EDEN_SR and planet.owner == OID_NONE:
 					# populate planet
 					log.debug("Adding EDEN", planetID)
 					self.cmd(planet).changeOwner(tran, planet, players[T_AIEDENPLAYER].oid, 1)

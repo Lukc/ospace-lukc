@@ -187,7 +187,7 @@ class GameMngr(IGEGameMngr):
 		planet = self.db[player.planets[0]]
 		hasOutpost = False
 		for struct in planet.slots:
-			if struct[STRUCT_IDX_TECHID] == Tech.OUTPOST1:
+			if struct[STRUCT_IDX_TECHID] == Tech.PRIMITIVEOUTPOST:
 				hasOutpost = True
 		if not hasOutpost:
 			# find something to replace
@@ -196,7 +196,7 @@ class GameMngr(IGEGameMngr):
 				for struct in planet.slots:
 					tech = Rules.techs[struct[STRUCT_IDX_TECHID]]
 					if getattr(tech, property) > 0:
-						struct[STRUCT_IDX_TECHID] = Tech.OUTPOST1
+						struct[STRUCT_IDX_TECHID] = Tech.PRIMITIVEOUTPOST
 						struct[STRUCT_IDX_HP] = tech.maxHP
 						finished = True
 						break
@@ -205,7 +205,7 @@ class GameMngr(IGEGameMngr):
 			if not finished:
 				# replace last structure
 				struct = planet.slots[-1]
-				struct[STRUCT_IDX_TECHID] = Tech.OUTPOST1
+				struct[STRUCT_IDX_TECHID] = Tech.PRIMITIVEOUTPOST
 				struct[STRUCT_IDX_HP] = tech.maxHP
 		# save game info
 		self.generateGameInfo()
@@ -299,14 +299,15 @@ class GameMngr(IGEGameMngr):
 		# TODO tweak more planet's attrs
 		planet = self.db[planetID]
 		planet.slots = [
-			Utils.newStructure(tran, Tech.PWRPLANTNUK1, playerID, STRUCT_STATUS_ON),
-			Utils.newStructure(tran, Tech.FARM1, playerID, STRUCT_STATUS_ON),
-			Utils.newStructure(tran, Tech.FARM1, playerID, STRUCT_STATUS_ON),
-			Utils.newStructure(tran, Tech.FARM1, playerID, STRUCT_STATUS_ON),
-			Utils.newStructure(tran, Tech.ANCFACTORY, playerID, STRUCT_STATUS_ON),
-			Utils.newStructure(tran, Tech.ANCFACTORY, playerID, STRUCT_STATUS_ON),
-			Utils.newStructure(tran, Tech.ANCRESLAB, playerID, STRUCT_STATUS_ON),
-			Utils.newStructure(tran, Tech.REPAIR1, playerID, STRUCT_STATUS_ON),
+			Utils.newStructure(tran, Tech.SOLARPOWERPLANT, playerID, STRUCT_STATUS_ON),
+			Utils.newStructure(tran, Tech.SOLARPOWERPLANT, playerID, STRUCT_STATUS_ON),
+			Utils.newStructure(tran, Tech.FARM, playerID, STRUCT_STATUS_ON),
+			Utils.newStructure(tran, Tech.FARM, playerID, STRUCT_STATUS_ON),
+			Utils.newStructure(tran, Tech.FARM, playerID, STRUCT_STATUS_ON),
+			Utils.newStructure(tran, Tech.FACTORY, playerID, STRUCT_STATUS_ON),
+			Utils.newStructure(tran, Tech.FACTORY, playerID, STRUCT_STATUS_ON),
+			Utils.newStructure(tran, Tech.RESEARCHLABORATORY, playerID, STRUCT_STATUS_ON),
+			Utils.newStructure(tran, Tech.SPACEPORT, playerID, STRUCT_STATUS_ON),
 		]
 		planet.storPop = Rules.startingPopulation
 		planet.storBio = Rules.startingBio
@@ -316,18 +317,20 @@ class GameMngr(IGEGameMngr):
 		planet.morale = Rules.maxMorale
 		# fleet
 		# add basic ships designs
-		tempTechs = [Tech.FTLENG1, Tech.SCOCKPIT1, Tech.SCANNERMOD1, Tech.CANNON1,
-			Tech.CONBOMB1, Tech.SMALLHULL1, Tech.MEDIUMHULL2, Tech.COLONYMOD2]
+		tempTechs = [Tech.FTLMICROENGINE, Tech.COCKPIT, Tech.OPTICALSCANNER, Tech.CANNON,
+			Tech.SMALLHULL, Tech.MEDIUMHULL, Tech.PRIMITIVECOLONYMODULE]
+		#tempTechs = [Tech.FTLENG1, Tech.SCOCKPIT1, Tech.SCANNERMOD1, Tech.CANNON1,
+		#	Tech.CONBOMB1, Tech.SMALLHULL1, Tech.MEDIUMHULL2, Tech.COLONYMOD2]
 		for techID in tempTechs:
 			player.techs[techID] = 1
-		dummy, scoutID = self.cmdPool[T_PLAYER].addShipDesign(tran, player, "Scout", Tech.SMALLHULL1,
-			{Tech.FTLENG1:3, Tech.SCOCKPIT1:1, Tech.SCANNERMOD1:1})
-		dummy, fighterID = self.cmdPool[T_PLAYER].addShipDesign(tran, player, "Fighter", Tech.SMALLHULL1,
-			{Tech.FTLENG1:3, Tech.SCOCKPIT1:1, Tech.CANNON1:1})
-		dummy, bomberID = self.cmdPool[T_PLAYER].addShipDesign(tran, player, "Bomber", Tech.SMALLHULL1,
-			{Tech.FTLENG1:3, Tech.SCOCKPIT1:1, Tech.CONBOMB1:1})
-		dummy, colonyID = self.cmdPool[T_PLAYER].addShipDesign(tran, player, "Colony Ship", Tech.MEDIUMHULL2,
-			{Tech.FTLENG1:4, Tech.SCOCKPIT1:1, Tech.COLONYMOD2:1})
+		dummy, scoutID = self.cmdPool[T_PLAYER].addShipDesign(tran, player, "Scout", Tech.SMALLHULL,
+			{Tech.FTLMICROENGINE:3, Tech.COCKPIT:1, Tech.OPTICALSCANNER:1})
+		dummy, fighterID = self.cmdPool[T_PLAYER].addShipDesign(tran, player, "Fighter", Tech.SMALLHULL,
+			{Tech.FTLMICROENGINE:3, Tech.COCKPIT:1, Tech.CANNON:1})
+		#dummy, bomberID = self.cmdPool[T_PLAYER].addShipDesign(tran, player, "Bomber", Tech.SMALLHULL1,
+		#	{Tech.FTLENG1:3, Tech.SCOCKPIT1:1, Tech.CONBOMB1:1})
+		dummy, colonyID = self.cmdPool[T_PLAYER].addShipDesign(tran, player, "Prototype Colony Ship", Tech.MEDIUMHULL,
+			{Tech.FTLMICROENGINE:4, Tech.COCKPIT:1, Tech.PRIMITIVECOLONYMODULE:1})
 		for techID in tempTechs:
 			del player.techs[techID]
 		# add small fleet

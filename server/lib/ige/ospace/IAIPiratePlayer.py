@@ -43,25 +43,25 @@ class IAIPiratePlayer(IPlayer):
 		#
 		obj.pirateFame = 0
 		obj.techLevel = 99
-		# grant technologies
-		obj.techs[Rules.Tech.EMCANNONTUR] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.SSROCKET2] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.TORPEDO] = Rules.techMaxImprovement
-		# grant special technologies
-		obj.techs[Rules.Tech.PIRATEBASE] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.PIRATEDEN] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.PIRATESD] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.PIRATEBREWERY] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.PIRATEPRISON] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.PIRATEPRISON] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.PIRSMCOLONYMOD] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.PIRATEFTLENG] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.PIRCOLONYMOD] = Rules.techMaxImprovement
-		# grant all TL1 ship techs except for colony module(s)
-		for techID in Rules.techs:
-			tech = Rules.techs[techID]
-			if tech.level == 1 and (tech.isShipEquip or tech.isShipHull) and not tech.unpackStruct:
-				obj.techs[techID] = Rules.techMaxImprovement
+#		# grant technologies
+#		obj.techs[Rules.Tech.EMCANNONTUR] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.SSROCKET2] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.TORPEDO] = Rules.techMaxImprovement
+#		# grant special technologies
+#		obj.techs[Rules.Tech.PIRATEBASE] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.PIRATEDEN] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.PIRATESD] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.PIRATEBREWERY] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.PIRATEPRISON] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.PIRATEPRISON] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.PIRSMCOLONYMOD] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.PIRATEFTLENG] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.PIRCOLONYMOD] = Rules.techMaxImprovement
+#		# grant all TL1 ship techs except for colony module(s)
+#		for techID in Rules.techs:
+#			tech = Rules.techs[techID]
+#			if tech.level == 1 and (tech.isShipEquip or tech.isShipHull) and not tech.unpackStruct:
+#				obj.techs[techID] = Rules.techMaxImprovement
     
 	def register(self, tran, obj):
 		log.debug("Registering player", obj.oid)
@@ -125,19 +125,19 @@ class IAIPiratePlayer(IPlayer):
 		IPlayer.update(self, tran, obj)
 		#
 		obj.techLevel = 99
-		# grant technologies
-		obj.techs[Rules.Tech.EMCANNONTUR] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.SSROCKET2] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.TORPEDO] = Rules.techMaxImprovement
-		# grant special technologies
-		obj.techs[Rules.Tech.PIRATEBASE] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.PIRATEDEN] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.PIRATESD] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.PIRATEBREWERY] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.PIRATEPRISON] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.PIRSMCOLONYMOD] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.PIRATEFTLENG] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.PIRCOLONYMOD] = Rules.techMaxImprovement
+#		# grant technologies
+#		obj.techs[Rules.Tech.EMCANNONTUR] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.SSROCKET2] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.TORPEDO] = Rules.techMaxImprovement
+#		# grant special technologies
+#		obj.techs[Rules.Tech.PIRATEBASE] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.PIRATEDEN] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.PIRATESD] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.PIRATEBREWERY] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.PIRATEPRISON] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.PIRSMCOLONYMOD] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.PIRATEFTLENG] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.PIRCOLONYMOD] = Rules.techMaxImprovement
 
 	def getDiplomacyWith(self, tran, obj, playerID):
 		if obj.oid == playerID:

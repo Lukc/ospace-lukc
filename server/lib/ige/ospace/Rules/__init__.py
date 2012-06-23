@@ -110,6 +110,13 @@ planetSpec[u"I"] = makeIDataHolder( # gaia
 	upgradeTo = None,
 	downgradeTo = u"E",
 )
+planetSpec[u"X"] = makeIDataHolder( # replicators
+	minBio = 0,
+	maxBio = 20,
+	upgradeTo = u"H",
+	upgradeEnReqs = (50, 125),
+	downgradeTo = None,
+)
 
 ## New colony settings
 colonyMinBio = 600

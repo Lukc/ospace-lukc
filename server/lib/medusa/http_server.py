@@ -6,7 +6,7 @@
 #						 All Rights Reserved.
 #
 
-RCS_ID =  '$Id$'
+RCS_ID =  '$Id: http_server.py 5 2006-01-04 21:36:55Z qark $'
 
 # python modules
 import os

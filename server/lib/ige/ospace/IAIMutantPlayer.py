@@ -73,34 +73,34 @@ class IAIMutantPlayer(IPlayer):
 	def update(self, tran, obj):
 		obj.techLevel = 99
 		obj.race = "m"
-		# grant technologies
-		obj.techs[Rules.Tech.EMCANNON] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.SSROCKET] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.TORPEDO] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.FTLENG1] = 3
-		obj.techs[Rules.Tech.SMALLHULL1] = 3
-		obj.techs[Rules.Tech.SCOCKPIT1] = 3
-		obj.techs[Rules.Tech.SCANNERMOD1] = 3
-		obj.techs[Rules.Tech.CONBOMB1] = 3
-		obj.techs[Rules.Tech.MUTANTBASE] = 3
-		obj.techs[Rules.Tech.MUTANTBASE2] = 3
-		obj.techs[Rules.Tech.MUTANTBASE3] = 3
-		obj.techs[Rules.Tech.MUTANTBASE4] = 3
-		obj.techs[Rules.Tech.MUTANTPP1] = 3
-		obj.techs[Rules.Tech.MUTANTPP2] = 3
-		obj.techs[Rules.Tech.MUTANTFACT1] = 3
-		obj.techs[Rules.Tech.MUTANTFACT2] = 3
-		obj.techs[Rules.Tech.MUTANTMINES] = 3
-		# create two basic designs [they use modules not available to the
-		# player otherwise so it has to be done this way]
-		obj.shipDesigns[1] = ShipUtils.makeShipMinSpec(obj, 'Swarmer', Rules.Tech.SMALLHULL1,
-				{Rules.Tech.SCOCKPIT1:1, Rules.Tech.EMCANNON:2, Rules.Tech.FTLENG1:2}, [])
-		obj.shipDesigns[2] = ShipUtils.makeShipMinSpec(obj, 'Seeder', Rules.Tech.MEDIUMHULL2,
-				{Rules.Tech.SCOCKPIT1:1, Rules.Tech.MUTANTPOD:1, Rules.Tech.FTLENG1:4}, [])
-		obj.shipDesigns[3] = ShipUtils.makeShipMinSpec(obj, 'Seeker', Rules.Tech.SMALLHULL1,
-				{Rules.Tech.SCOCKPIT1:1, Rules.Tech.SCANNERMOD1:1, Rules.Tech.FTLENG1:2}, [])
-		obj.shipDesigns[4] = ShipUtils.makeShipMinSpec(obj, 'Sower', Rules.Tech.SMALLHULL1,
-				{Rules.Tech.SCOCKPIT1:1, Rules.Tech.CONBOMB1:1, Rules.Tech.FTLENG1:2}, [])
+#		# grant technologies
+#		obj.techs[Rules.Tech.EMCANNON] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.SSROCKET] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.TORPEDO] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.FTLENG1] = 3
+#		obj.techs[Rules.Tech.SMALLHULL1] = 3
+#		obj.techs[Rules.Tech.SCOCKPIT1] = 3
+#		obj.techs[Rules.Tech.SCANNERMOD1] = 3
+#		obj.techs[Rules.Tech.CONBOMB1] = 3
+#		obj.techs[Rules.Tech.MUTANTBASE] = 3
+#		obj.techs[Rules.Tech.MUTANTBASE2] = 3
+#		obj.techs[Rules.Tech.MUTANTBASE3] = 3
+#		obj.techs[Rules.Tech.MUTANTBASE4] = 3
+#		obj.techs[Rules.Tech.MUTANTPP1] = 3
+#		obj.techs[Rules.Tech.MUTANTPP2] = 3
+#		obj.techs[Rules.Tech.MUTANTFACT1] = 3
+#		obj.techs[Rules.Tech.MUTANTFACT2] = 3
+#		obj.techs[Rules.Tech.MUTANTMINES] = 3
+#		# create two basic designs [they use modules not available to the
+#		# player otherwise so it has to be done this way]
+#		obj.shipDesigns[1] = ShipUtils.makeShipMinSpec(obj, 'Swarmer', Rules.Tech.SMALLHULL1,
+#				{Rules.Tech.SCOCKPIT1:1, Rules.Tech.EMCANNON:2, Rules.Tech.FTLENG1:2}, [])
+#		obj.shipDesigns[2] = ShipUtils.makeShipMinSpec(obj, 'Seeder', Rules.Tech.MEDIUMHULL2,
+#				{Rules.Tech.SCOCKPIT1:1, Rules.Tech.MUTANTPOD:1, Rules.Tech.FTLENG1:4}, [])
+#		obj.shipDesigns[3] = ShipUtils.makeShipMinSpec(obj, 'Seeker', Rules.Tech.SMALLHULL1,
+#				{Rules.Tech.SCOCKPIT1:1, Rules.Tech.SCANNERMOD1:1, Rules.Tech.FTLENG1:2}, [])
+#		obj.shipDesigns[4] = ShipUtils.makeShipMinSpec(obj, 'Sower', Rules.Tech.SMALLHULL1,
+#				{Rules.Tech.SCOCKPIT1:1, Rules.Tech.CONBOMB1:1, Rules.Tech.FTLENG1:2}, [])
 		# call super method
 		IPlayer.update(self, tran, obj)
 

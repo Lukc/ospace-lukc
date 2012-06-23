@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #
 #  Copyright 2001 - 2006 Ludek Smid [http://www.ospace.net/]
 #
@@ -202,21 +203,33 @@ STARTPOS_PIRATE = 3
 
 ## strategic resources
 SR_NONE = 0
-# TL 1 + TL 2
-SR_TL1A = 1 # URANIUM
-SR_TL1B = 2 # TITAN
-# TL 3 + TL 4
-SR_TL3A = 3
-SR_TL3B = 4
-SR_TL3C = 5
-# TL 5
-SR_TL5A = 6
-SR_TL5B = 7
-SR_TL5C = 8
+# Commonly used.
+SR_GYPSUM = 1
+SR_URANIUM = 2
+SR_TITANIUM = 3
+SR_IRIDIUM = 4
+SR_HELIUM  = 5
+# A bit less commonly used.
+SR_XENON = 6
+SR_CHROMIUM = 7
+SR_SILICON = 8
+SR_CARBONEUM = 9 # I don’t know what this is, but it seems fun!
+# Rarely used, but so powerful!
+SR_PLUTONIUM = 10
+SR_TUNGSTEN = 11
+SR_DIAMOND = 12
+
 # TL ALIENS
-SR_TLAA = 1000 # Unnilseptium
-# "goods"
-SR_BIO1 = 100
+SR_UNNILSEPTIUM = 1000 # Unnilseptium
+# Produced-only resources
+SR_MUTAGEN = 100
+SR_ANTIMATTER = 101
+SR_NEUTRONIUM = 102
+
+# On planets containing what strategic resources do they appear, hum?
+RENEGADES_SR = []
+PIRATES_SR =   []
+EDEN_SR =      []
 
 ## ship improvements
 SI_SPEED = 1

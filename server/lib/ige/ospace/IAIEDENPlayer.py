@@ -62,19 +62,19 @@ class IAIEDENPlayer(IPlayer):
 	def update(self, tran, obj):
 		obj.techLevel = 3
 		obj.race = "e"
-		# grant technologies
-		obj.techs[Rules.Tech.LASCANNONTUR3] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.SSROCKET2] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.TORPEDO] = Rules.techMaxImprovement
-		# call super method
-		IPlayer.update(self, tran, obj)
-		#add TL99 techs
-		obj.techLevel = 99
-		obj.techs[Rules.Tech.EDENCANNON] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.EDENMISSILE] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.EDENTORP] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.EDENBOMB] = Rules.techMaxImprovement
-		obj.techs[Rules.Tech.EDENSTATION] = Rules.techMaxImprovement
+#		# grant technologies
+#		obj.techs[Rules.Tech.LASCANNONTUR3] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.SSROCKET2] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.TORPEDO] = Rules.techMaxImprovement
+#		# call super method
+#		IPlayer.update(self, tran, obj)
+#		#add TL99 techs
+#		obj.techLevel = 99
+#		obj.techs[Rules.Tech.EDENCANNON] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.EDENMISSILE] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.EDENTORP] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.EDENBOMB] = Rules.techMaxImprovement
+#		obj.techs[Rules.Tech.EDENSTATION] = Rules.techMaxImprovement
 
 	def processINITPhase(self, tran, obj, data):
 		IPlayer.processINITPhase(self, tran, obj, data)

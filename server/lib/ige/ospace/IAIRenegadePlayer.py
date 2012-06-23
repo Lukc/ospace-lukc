@@ -77,23 +77,23 @@ class IAIRenegadePlayer(IPlayer):
 		obj.techLevel = 99
 		obj.race = "r"
 		# grant technologies
-		obj.techs[Rules.Tech.CANNON1] = 3
-		obj.techs[Rules.Tech.SSROCKET] = 3
-		obj.techs[Rules.Tech.RENEGADEBASE] = 3
-		obj.techs[Rules.Tech.RENEGADEBASE2] = 3
-		obj.techs[Rules.Tech.RENEGADEBASE2MINOR] = 3
-		obj.techs[Rules.Tech.RENEGADEBASE3] = 3
-		obj.techs[Rules.Tech.RENEGADEBASE3MINOR] = 3
-		obj.techs[Rules.Tech.RENEGADECOSMODROME] = 3
-		if not len(obj.shipDesigns) == 3:
-			# three basic designs [they use modules not available to the player otherwise
-			# so it has to be done this way]
-			obj.shipDesigns[1] = ShipUtils.makeShipMinSpec(obj, 'Fighter', Rules.Tech.SMALLHULL1,
-				{Rules.Tech.SCOCKPIT1:1, Rules.Tech.CANNON1:1}, [])
-			obj.shipDesigns[2] = ShipUtils.makeShipMinSpec(obj, 'Corvette', Rules.Tech.SMALLHULL1,
-				{Rules.Tech.SCOCKPIT1:1, Rules.Tech.CANNON1:2, Rules.Tech.STEELARM2:1}, [])
-			obj.shipDesigns[3] = ShipUtils.makeShipMinSpec(obj, 'Frigate', Rules.Tech.MEDIUMHULL2,
-				{Rules.Tech.SBRIDGE1:1, Rules.Tech.CANNON1:2, Rules.Tech.SSROCKET:2}, [])
+#		obj.techs[Rules.Tech.CANNON1] = 3
+#		obj.techs[Rules.Tech.SSROCKET] = 3
+#		obj.techs[Rules.Tech.RENEGADEBASE] = 3
+#		obj.techs[Rules.Tech.RENEGADEBASE2] = 3
+#		obj.techs[Rules.Tech.RENEGADEBASE2MINOR] = 3
+#		obj.techs[Rules.Tech.RENEGADEBASE3] = 3
+#		obj.techs[Rules.Tech.RENEGADEBASE3MINOR] = 3
+#		obj.techs[Rules.Tech.RENEGADECOSMODROME] = 3
+#		if not len(obj.shipDesigns) == 3:
+#			# three basic designs [they use modules not available to the player otherwise
+#			# so it has to be done this way]
+#			obj.shipDesigns[1] = ShipUtils.makeShipMinSpec(obj, 'Fighter', Rules.Tech.SMALLHULL1,
+#				{Rules.Tech.SCOCKPIT1:1, Rules.Tech.CANNON1:1}, [])
+#			obj.shipDesigns[2] = ShipUtils.makeShipMinSpec(obj, 'Corvette', Rules.Tech.SMALLHULL1,
+#				{Rules.Tech.SCOCKPIT1:1, Rules.Tech.CANNON1:2, Rules.Tech.STEELARM2:1}, [])
+#			obj.shipDesigns[3] = ShipUtils.makeShipMinSpec(obj, 'Frigate', Rules.Tech.MEDIUMHULL2,
+#				{Rules.Tech.SBRIDGE1:1, Rules.Tech.CANNON1:2, Rules.Tech.SSROCKET:2}, [])
 		# call super method
 		IPlayer.update(self, tran, obj)
 

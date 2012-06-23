@@ -1,0 +1,151 @@
+2012-06-23 09:57:40 MSG -- Outer Space 0.5.68 [SVN Rev: 308]
+2012-06-23 09:57:40 DBG -- Importing IGE modules...
+2012-06-23 09:57:40 DBG -- Checking file Asteroid.xml
+2012-06-23 09:57:40 DBG -- Checking file Setup.xml
+2012-06-23 09:57:40 DBG -- Checking file TL1.xml
+2012-06-23 09:57:40 MSG -- Loading XML files from /home/lukc/ospace/server/lib/ige/ospace/Rules
+2012-06-23 09:57:40 MSG -- Parsing XML file Asteroid.xml
+2012-06-23 09:57:40 DBG -- Tech Asteroid 1 [1900]
+2012-06-23 09:57:40 DBG -- Tech Asteroid 10 [1901]
+2012-06-23 09:57:40 DBG -- Tech Asteroid 100 [1902]
+2012-06-23 09:57:40 DBG -- Tech Asteroid 1000 [1903]
+2012-06-23 09:57:40 MSG -- Parsing XML file Setup.xml
+2012-06-23 09:57:40 DBG -- Tech Habitable Surface Expansion [3802]
+2012-06-23 09:57:40 MSG -- Parsing XML file TL1.xml
+2012-06-23 09:57:40 DBG -- Tech Observatory [1001]
+2012-06-23 09:57:40 DBG -- Tech Outpost [1010]
+2012-06-23 09:57:40 DBG -- Tech Farm [1020]
+2012-06-23 09:57:40 DBG -- Tech Factory [1030]
+2012-06-23 09:57:40 DBG -- Tech Solar Power Plant [1040]
+2012-06-23 09:57:40 DBG -- Tech Research Laboratory [1050]
+2012-06-23 09:57:40 DBG -- Tech Space Port [1060]
+2012-06-23 09:57:40 DBG -- Tech Small Hull [1070]
+2012-06-23 09:57:40 DBG -- Tech FTL Micro-Engine [1071]
+2012-06-23 09:57:40 DBG -- Tech Cockpit [1072]
+2012-06-23 09:57:40 DBG -- Tech Optical Scanner [1073]
+2012-06-23 09:57:40 DBG -- Tech Cannon [1080]
+2012-06-23 09:57:40 DBG -- Cleaning up researchDisables
+2012-06-23 09:57:40 DBG -- Cleaning up researchReqSRes
+2012-06-23 09:57:40 DBG -- Cleaning up researchRequires
+2012-06-23 09:57:40 DBG -- Cleaning up buildSRes
+2012-06-23 09:57:40 DBG -- Cleaning up structWeapons
+2012-06-23 09:57:40 DBG -- Cleaning up researchEnables
+2012-06-23 09:57:40 MSG -- Converting symbolic fields...
+2012-06-23 09:57:40 MSG -- Linking tech tree...
+2012-06-23 09:57:40 DBG -- Tech disable iteration
+2012-06-23 09:57:40 MSG -- Saving specification...
+2012-06-23 09:57:40 MSG -- There is 17 technologies
+2012-06-23 09:57:40 MSG -- Reading configuration from var/config.ini
+2012-06-23 09:57:40 MSG -- Runtime mode changed to True
+2012-06-23 09:57:40 MSG -- Using sqlite3 dabase backend
+2012-06-23 09:57:40 DBG -- Creating databases...
+2012-06-23 09:57:40 MSG -- Opening database game_Alpha
+2012-06-23 09:57:40 MSG -- Opening database accounts
+2012-06-23 09:57:40 MSG -- Opening database messages
+2012-06-23 09:57:40 MSG -- Initializing game 'Alpha'...
+2012-06-23 09:57:40 DBG -- Initializing issue manager
+2012-06-23 09:57:40 DBG -- Initializing client manager
+2012-06-23 09:57:40 DBG -- Initializing message manager
+2012-06-23 09:57:40 DBG -- Initializing game manager
+2012-06-23 09:57:40 DBG -- Runtime mode True
+2012-06-23 09:57:40 MSG -- Initialized. Starting server...
+2012-06-23 09:57:40 MSG -- NOT using psyco
+2012-06-23 09:57:46 DBG -- OSClient/0.5.68 connected. User 'Lukc'
+2012-06-23 09:57:46 DBG -- e8b8a3c9 login 'Lukc' hostid FILLMEWITHREALVALUE
+2012-06-23 09:57:47 DBG -- execute e8b8a3c9 1 getIntroInfo ()
+2012-06-23 09:57:47 DBG -- Adding cid to session 12120
+2012-06-23 09:57:47 DBG -- execute e8b8a3c9 1 getIntroInfo ()
+2012-06-23 09:57:47 DBG -- execute e8b8a3c9 12120 getInfo ()
+2012-06-23 09:57:47 DBG -- execute e8b8a3c9 12120 getScannerMap ()
+2012-06-23 09:57:47 DBG -- execute e8b8a3c9 1 multiGetInfo ([12017, 12121],)
+2012-06-23 09:57:47 DBG -- execute e8b8a3c9 12017 getInfo ()
+2012-06-23 09:57:47 DBG -- execute e8b8a3c9 12121 getInfo ()
+2012-06-23 09:57:47 DBG -- execute e8b8a3c9 10044 getPublicInfo ()
+2012-06-23 09:57:48 DBG -- execute e8b8a3c9 1 getPublicInfo ()
+2012-06-23 09:57:48 DBG -- execute e8b8a3c9 1 multiGetMsgs ([(12120, -1), (10044, -1), (1, -1)],)
+2012-06-23 09:57:48 DBG -- execute e8b8a3c9 12120 getMsgs (-1,)
+2012-06-23 09:57:48 DBG -- execute e8b8a3c9 10044 getMsgs (-1,)
+2012-06-23 09:57:48 DBG -- execute e8b8a3c9 1 getMsgs (-1,)
+2012-06-23 09:59:00 DBG -- execute e8b8a3c9 12017 moveStruct (5, -1)
+2012-06-23 09:59:01 DBG -- execute e8b8a3c9 12017 moveStruct (4, 1)
+2012-06-23 10:02:01 DBG -- execute e8b8a3c9 1 multiGetMsgs ([(12120, -1), (10044, -1), (1, -1)],)
+2012-06-23 10:02:01 DBG -- execute e8b8a3c9 12120 getMsgs (-1,)
+2012-06-23 10:02:01 DBG -- execute e8b8a3c9 10044 getMsgs (-1,)
+2012-06-23 10:02:01 DBG -- execute e8b8a3c9 1 getMsgs (-1,)
+2012-06-23 10:05:01 DBG -- execute e8b8a3c9 1 multiGetMsgs ([(12120, -1), (10044, -1), (1, -1)],)
+2012-06-23 10:05:01 DBG -- execute e8b8a3c9 12120 getMsgs (-1,)
+2012-06-23 10:05:01 DBG -- execute e8b8a3c9 10044 getMsgs (-1,)
+2012-06-23 10:05:01 DBG -- execute e8b8a3c9 1 getMsgs (-1,)
+2012-06-23 10:08:01 DBG -- execute e8b8a3c9 1 multiGetMsgs ([(12120, -1), (10044, -1), (1, -1)],)
+2012-06-23 10:08:01 DBG -- execute e8b8a3c9 12120 getMsgs (-1,)
+2012-06-23 10:08:01 DBG -- execute e8b8a3c9 10044 getMsgs (-1,)
+2012-06-23 10:08:01 DBG -- execute e8b8a3c9 1 getMsgs (-1,)
+2012-06-23 10:11:01 DBG -- execute e8b8a3c9 1 multiGetMsgs ([(12120, -1), (10044, -1), (1, -1)],)
+2012-06-23 10:11:01 DBG -- execute e8b8a3c9 12120 getMsgs (-1,)
+2012-06-23 10:11:01 DBG -- execute e8b8a3c9 10044 getMsgs (-1,)
+2012-06-23 10:11:01 DBG -- execute e8b8a3c9 1 getMsgs (-1,)
+2012-06-23 10:14:01 DBG -- execute e8b8a3c9 1 multiGetMsgs ([(12120, -1), (10044, -1), (1, -1)],)
+2012-06-23 10:14:01 DBG -- execute e8b8a3c9 12120 getMsgs (-1,)
+2012-06-23 10:14:01 DBG -- execute e8b8a3c9 10044 getMsgs (-1,)
+2012-06-23 10:14:01 DBG -- execute e8b8a3c9 1 getMsgs (-1,)
+2012-06-23 10:17:01 DBG -- execute e8b8a3c9 1 multiGetMsgs ([(12120, -1), (10044, -1), (1, -1)],)
+2012-06-23 10:17:01 DBG -- execute e8b8a3c9 12120 getMsgs (-1,)
+2012-06-23 10:17:01 DBG -- execute e8b8a3c9 10044 getMsgs (-1,)
+2012-06-23 10:17:01 DBG -- execute e8b8a3c9 1 getMsgs (-1,)
+2012-06-23 10:20:01 DBG -- execute e8b8a3c9 1 multiGetMsgs ([(12120, -1), (10044, -1), (1, -1)],)
+2012-06-23 10:20:01 DBG -- execute e8b8a3c9 12120 getMsgs (-1,)
+2012-06-23 10:20:01 DBG -- execute e8b8a3c9 10044 getMsgs (-1,)
+2012-06-23 10:20:01 DBG -- execute e8b8a3c9 1 getMsgs (-1,)
+2012-06-23 10:23:01 DBG -- execute e8b8a3c9 1 multiGetMsgs ([(12120, -1), (10044, -1), (1, -1)],)
+2012-06-23 10:23:01 DBG -- execute e8b8a3c9 12120 getMsgs (-1,)
+2012-06-23 10:23:01 DBG -- execute e8b8a3c9 10044 getMsgs (-1,)
+2012-06-23 10:23:01 DBG -- execute e8b8a3c9 1 getMsgs (-1,)
+2012-06-23 10:26:01 DBG -- execute e8b8a3c9 1 multiGetMsgs ([(12120, -1), (10044, -1), (1, -1)],)
+2012-06-23 10:26:01 DBG -- execute e8b8a3c9 12120 getMsgs (-1,)
+2012-06-23 10:26:01 DBG -- execute e8b8a3c9 10044 getMsgs (-1,)
+2012-06-23 10:26:01 DBG -- execute e8b8a3c9 1 getMsgs (-1,)
+2012-06-23 10:29:01 DBG -- execute e8b8a3c9 1 multiGetMsgs ([(12120, -1), (10044, -1), (1, -1)],)
+2012-06-23 10:29:01 DBG -- execute e8b8a3c9 12120 getMsgs (-1,)
+2012-06-23 10:29:01 DBG -- execute e8b8a3c9 10044 getMsgs (-1,)
+2012-06-23 10:29:01 DBG -- execute e8b8a3c9 1 getMsgs (-1,)
+2012-06-23 10:32:01 DBG -- execute e8b8a3c9 1 multiGetMsgs ([(12120, -1), (10044, -1), (1, -1)],)
+2012-06-23 10:32:01 DBG -- execute e8b8a3c9 12120 getMsgs (-1,)
+2012-06-23 10:32:01 DBG -- execute e8b8a3c9 10044 getMsgs (-1,)
+2012-06-23 10:32:01 DBG -- execute e8b8a3c9 1 getMsgs (-1,)
+2012-06-23 10:35:02 DBG -- execute e8b8a3c9 1 multiGetMsgs ([(12120, -1), (10044, -1), (1, -1)],)
+2012-06-23 10:35:02 DBG -- execute e8b8a3c9 12120 getMsgs (-1,)
+2012-06-23 10:35:02 DBG -- execute e8b8a3c9 10044 getMsgs (-1,)
+2012-06-23 10:35:02 DBG -- execute e8b8a3c9 1 getMsgs (-1,)
+2012-06-23 10:38:02 DBG -- execute e8b8a3c9 1 multiGetMsgs ([(12120, -1), (10044, -1), (1, -1)],)
+2012-06-23 10:38:02 DBG -- execute e8b8a3c9 12120 getMsgs (-1,)
+2012-06-23 10:38:02 DBG -- execute e8b8a3c9 10044 getMsgs (-1,)
+2012-06-23 10:38:02 DBG -- execute e8b8a3c9 1 getMsgs (-1,)
+2012-06-23 10:41:02 DBG -- execute e8b8a3c9 1 multiGetMsgs ([(12120, -1), (10044, -1), (1, -1)],)
+2012-06-23 10:41:02 DBG -- execute e8b8a3c9 12120 getMsgs (-1,)
+2012-06-23 10:41:02 DBG -- execute e8b8a3c9 10044 getMsgs (-1,)
+2012-06-23 10:41:02 DBG -- execute e8b8a3c9 1 getMsgs (-1,)
+2012-06-23 10:44:02 DBG -- execute e8b8a3c9 1 multiGetMsgs ([(12120, -1), (10044, -1), (1, -1)],)
+2012-06-23 10:44:02 DBG -- execute e8b8a3c9 12120 getMsgs (-1,)
+2012-06-23 10:44:02 DBG -- execute e8b8a3c9 10044 getMsgs (-1,)
+2012-06-23 10:44:02 DBG -- execute e8b8a3c9 1 getMsgs (-1,)
+2012-06-23 10:47:02 DBG -- execute e8b8a3c9 1 multiGetMsgs ([(12120, -1), (10044, -1), (1, -1)],)
+2012-06-23 10:47:02 DBG -- execute e8b8a3c9 12120 getMsgs (-1,)
+2012-06-23 10:47:02 DBG -- execute e8b8a3c9 10044 getMsgs (-1,)
+2012-06-23 10:47:02 DBG -- execute e8b8a3c9 1 getMsgs (-1,)
+2012-06-23 10:50:02 DBG -- execute e8b8a3c9 1 multiGetMsgs ([(12120, -1), (10044, -1), (1, -1)],)
+2012-06-23 10:50:02 DBG -- execute e8b8a3c9 12120 getMsgs (-1,)
+2012-06-23 10:50:02 DBG -- execute e8b8a3c9 10044 getMsgs (-1,)
+2012-06-23 10:50:02 DBG -- execute e8b8a3c9 1 getMsgs (-1,)
+2012-06-23 10:53:02 DBG -- execute e8b8a3c9 1 multiGetMsgs ([(12120, -1), (10044, -1), (1, -1)],)
+2012-06-23 10:53:02 DBG -- execute e8b8a3c9 12120 getMsgs (-1,)
+2012-06-23 10:53:02 DBG -- execute e8b8a3c9 10044 getMsgs (-1,)
+2012-06-23 10:53:02 DBG -- execute e8b8a3c9 1 getMsgs (-1,)
+2012-06-23 10:56:02 DBG -- execute e8b8a3c9 1 multiGetMsgs ([(12120, -1), (10044, -1), (1, -1)],)
+2012-06-23 10:56:02 DBG -- execute e8b8a3c9 12120 getMsgs (-1,)
+2012-06-23 10:56:02 DBG -- execute e8b8a3c9 10044 getMsgs (-1,)
+2012-06-23 10:56:02 DBG -- execute e8b8a3c9 1 getMsgs (-1,)
+2012-06-23 10:57:04 DBG -- execute e8b8a3c9 1 multiGetMsgs ([(12120, -1), (10044, -1), (1, -1)],)
+2012-06-23 10:57:04 DBG -- execute e8b8a3c9 12120 getMsgs (-1,)
+2012-06-23 10:57:04 DBG -- execute e8b8a3c9 10044 getMsgs (-1,)
+2012-06-23 10:57:04 DBG -- execute e8b8a3c9 1 getMsgs (-1,)
+2012-06-23 10:57:14 DBG -- e8b8a3c9 logout Lukc

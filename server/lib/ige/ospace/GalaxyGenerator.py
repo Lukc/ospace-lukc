@@ -32,6 +32,7 @@ class GalaxyStats:
 		}
 		self.makeStats(galaxyID)
 
+	# FIXME: Broken.
 	def circle4P(self):
 		self.galaxyMinPlanets = 0
 		self.galaxyMaxPlanets = 99999
@@ -53,9 +54,15 @@ class GalaxyStats:
 			6 : (5, 6, 1), # TL 5
 			7 : (5, 6, 1), # TL 5
 			8 : (5, 6, 1), # TL 5
+			# Common
+			9  : (8, 15, 2),
+			10 : (8, 15, 2),
+			11 : (8, 15, 2),
+			13 : (8, 15, 2),
 		}
 		self.galaxyDiseases = {}
 
+	# FIXME: Broken.
 	def circle9P(self):
 		self.galaxyMinPlanets = 500
 		self.galaxyMaxPlanets = 600
@@ -93,27 +100,28 @@ class GalaxyStats:
 		self.galaxyDensity = {7.5: 3, 10: 4, 20: 5, 30: 5.5, 40: 6, 50: 6}
 		self.galaxyResources = {
 			# format resourceID : (minDist, maxDist, number of resources)
-			1 : (20, 45, 15), # TL 1 + 2
-			2 : (20, 45, 15), # TL 1 + 2
-			3 : (8, 15, 7), # TL 3 + 4
-			4 : (8, 15, 7), # TL 3 + 4
-			5 : (8, 15, 7), # TL 3 + 4
-			6 : (7.5, 9, 1), # TL 5
-			7 : (7.5, 9, 1), # TL 5
-			8 : (7.5, 9, 1), # TL 5
+			# Five firsts are common resources
+			1 : (8, 45, 30),
+			2 : (8, 45, 30),
+			3 : (8, 45, 30),
+			4 : (8, 45, 30),
+			5 : (8, 45, 30),
+			# Four next are findable resources
+			6 : (7.5, 45, 15),
+			7 : (7.5, 45, 15),
+			8 : (7.5, 45, 15),
+			9  : (7.5, 45, 15),
+			# Last three are rarer resources
+			10 : (7.5, 45, 7),
+			11 : (7.5, 45, 7),
+			12 : (7.5, 45, 7),
 		}
 		self.galaxyDiseases = {
 			# format diseaseID : (minDist, maxDist, number of diseases)
-			1 : (20, 45, 8), # TL 1 + 2
-			2 : (20, 45, 8), # TL 1 + 2
-			3 : (5, 15, 4), # TL 3 + 4
-			4 : (5, 15, 4), # TL 3 + 4
-			5 : (5, 15, 4), # TL 3 + 4
-			6 : (0, 5, 1), # TL 5
-			7 : (0, 5, 1), # TL 5
-			8 : (0, 5, 1), # TL 5
+			# No disease in my world! :)
 		}	
 
+	# FIXME: Broken.
 	def circle65P(self):
 		self.galaxyMinPlanets = 0
 		self.galaxyMaxPlanets = 99999
@@ -137,6 +145,11 @@ class GalaxyStats:
 			6 : (7.5, 9, 1), # TL 5
 			7 : (7.5, 9, 1), # TL 5
 			8 : (7.5, 9, 1), # TL 5
+			# Common
+			9  : (10, 67.5, 45),
+			10 : (10, 67.5, 45),
+			11 : (10, 67.5, 45),
+			13 : (10, 67.5, 45),
 		}
 		self.galaxyDiseases = {
 			# format diseaseID : (minDist, maxDist, number of diseases)
@@ -445,7 +458,7 @@ def generateSystem(system, ranges = None):
 	elif num < 980000: system.starClass = 'dF'
 	elif num < 990000: system.starClass = 'dG'
 	elif num < 999500: system.starClass = 'dK'
-	elif num < 999995: system.starClass = 'n-'
+	elif num < 999980: system.starClass = 'n-'
 	elif num < 1000000: system.starClass = 'b-'
 	else: system.starClass = 'b-'
 	# planets
@@ -474,11 +487,11 @@ def generateSystem(system, ranges = None):
 			num = random.randrange(1, 7)
 			planets = distributePlanets(mod * num)
 	elif system.starClass[0] == 'd':
-		if num < 10:
+		if num < 15:
 			num = int(mod * random.randrange(1, 7) / 2)
 			planets = (0, 0, num)
 	elif system.starClass[0] == 'n' or system.starClass[0] == 'b':
-		if num < 5:
+		if num < 10:
 			num = int(mod * random.randrange(1, 7) / 2)
 			planets = (0, 0, num)
 	# planets
@@ -581,6 +594,9 @@ def generatePlanet(zone, planet):
 	elif planet.type == 'C': planet.slots = int(planet.maxSlots * 0.75)
 	elif planet.type == 'R': planet.slots = int(planet.maxSlots * 0.75)
 	else: planet.slots = 0
+	# moons
+	planet.plMaxMoonsSlots = int(planet.maxSlots * 0.25)
+	planet.plMoonsSlots = int(planet.maxSlots * 0.1)
 	# make sure that all planets except A and G has at least one slot
 	if planet.type in "EMHDCR" and planet.slots == 0:
 		#@print "Fixing slots", planet.type, planet.slots, planet.maxSlots

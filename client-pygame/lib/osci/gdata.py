@@ -76,19 +76,25 @@ fleetActions = {
 
 stratRes = {
 	0: N_("None"),
-	1: N_("Uranium"),
-	2: N_("Titanium"),
-	3: N_("Chromium"),
-	4: N_("Silicium"),
-	5: N_("Carboneum"),
-	6: N_("Antimatter"),
-	7: N_("Plutonium"),
-	8: N_("Wolframium"),
+	1: N_("Gypsum"),
+	2: N_("Uranium"),
+	3: N_("Titanium"),
+	4: N_("Iridium"),
+	5: N_("Helium"),
+	6: N_("Xenon"),
+	7: N_("Chromium"),
+	8: N_("Silicon"),
+	9: N_("Carboneum"),
+	10: N_("Plutonium"),
+	11: N_("Tungsten"),
+	12: N_("Diamond"),
 	100: N_("Mutagen"),
+	101: N_("Antimatter"),
+	102: N_("Neutronium"),
 	1000: N_("Unnilseptium")
 }
 
-relationNames = [N_("Enemy"), N_("Unfriendly"), N_("Unfriendly"), N_("Neutral"),
+relationNames = [N_("Enemy"), N_("Hostile"), N_("Hostile"), N_("Neutral"),
 	N_("Neutral"), N_("Friendly"), N_("Friendly"), N_("Allied")]
 
 pactNames = {
@@ -140,11 +146,11 @@ moraleStates = {
 	-0.875: N_("MORALE IS TERRIBLE"),
 	-0.75: N_("MORALE IS TERRIBLE"),
 	-0.625: N_("MORALE IS TERRIBLE"),
-	-0.50: N_("MORALE IS BAD"),
-	-0.375: N_("MORALE IS VERY LOW"),
-	-0.25: N_("MORALE IS LOW"),
-	-0.125: N_("MORALE IS BELOW AVERAGE"),
-	0.0: N_(" "),
+	-0.50: N_("MORALE IS POOR"),
+	-0.375: N_("MORALE IS BAD"),
+	-0.25: N_("MORALE IS VERY LOW"),
+	-0.125: N_("MORALE IS LOW"),
+	0.0: N_("MORALE IS FAIR"),
 	0.125: N_("MORALE IS HIGH"),
 	0.25: N_("MORALE IS SUPERB"),
 }

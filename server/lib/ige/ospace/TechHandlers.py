@@ -258,13 +258,23 @@ def finishProjectAssemblePl(tran, source, target, tech):
     target.plMaxSlots = target.plDiameter / 1000
     target.plSlots = target.plMaxSlots / 2
 
+# <Lukc>: Asteroids are everywhere, and you don't need a belt to mine them.
+#         Of course that would help, but then, the Oor clouds and things like
+#         that should contain much more of them. Also, asteroid mining 
+#         installations are (or should, to be useful) mobile, and able to
+#         relocate on another asteroid when required to, which make this tech
+#         logical and coherent.
+def validateProjectAsteroidMining(tran, source, target, tech):
+    return source.plMin < 200
+
 def finishProjectAsteroidMining(tran, source, target, tech):
     techEff = Utils.getTechEff(tran, tech.id, source.owner)
-    minerals = min(int(float(tech.data) * techEff), target.plMin)
+    #minerals = min(int(float(tech.data) * techEff), target.plMin)
     # now, transfer only minerals up to 200 on source planet
-    minerals = min(minerals, 200 - source.plMin)
-    target.plMin -= minerals
-    source.plMin += minerals
+    #minerals = min(minerals, 200 - source.plMin)
+    #target.plMin -= minerals
+    #source.plMin += minerals
+    source.plMin = min(200, source.plMin + int(float(tech.data) * techEff))
 
 def validateProjectBioEnrich(tran, source, target, tech):
     spec = Rules.planetSpec['E']

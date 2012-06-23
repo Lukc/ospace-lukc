@@ -44,6 +44,8 @@ class IPlanet(IObject):
 		obj.plEnv = 0
 		obj.plSlots = 0
 		obj.plMaxSlots = 0
+		#obj.plMoonsSlots = 0
+		#obj.plMaxMoonsSlots = 0
 		obj.plStratRes = 0
 		obj.plDisease = 0
 		obj.plStarting = 0
@@ -838,10 +840,12 @@ class IPlanet(IObject):
 			result.name = obj.name
 			result.storPop = obj.storPop
 			result.owner = obj.owner
+			#XXX result.plMaxMoonsSlots = obj.plMaxMoonsSlots
 		if scanPwr >= Rules.level4InfoScanPwr:
 			# TODO provide less information
 			result.hasRefuel = (obj.refuelInc > 0) #simple detect if docks exist for problems dialog
 			result.slots = obj.slots
+			#XXX result.plMoonsSlots = obj.plMoonsSlots
 			result.shield = obj.shield
 			result.prevShield = -1
 			result.maxShield = -1
