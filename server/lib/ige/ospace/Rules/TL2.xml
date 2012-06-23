@@ -168,18 +168,40 @@
 			researchMod="1.0"
 			level="2"
 			researchRequires="SOLARPOWERPLANT-5"
-			researchRaces="HC"
+			researchRaces="H"
 		/>
 		<structure
 			subtype="str400"
 			buildProd="1000"
 			operWorkers="700"
 			storEn="5000"
-			prodEn="500"
+			prodEn="600"
 			prodEnMod="0.0,0.0,1.0,0.0"
 			maxHP="400"
 		/>
 		<preresearch>An orbital structure to reflect an important part of the star’s light on a specialized structure on the ground produces much more energy than the traditionnal solar farms.</preresearch>
+	</technology>
+	<technology id="2340" symbol="FISSIONCOMPLEX" name="Fission Complex">
+		<discovery
+			researchMod="1.00 + 0.50"
+			level="1"
+			researchRequires="FISSIONPOWERPLANT"
+			researchRaces="C"
+		/>
+		<!-- A bit overpowered but, well, it is an underground structure, it is
+		     cyborg, and it destroys environment… and they need strategic 
+		     resources to build their TL2 power plant. -->
+		<structure
+			subtype="str400"
+			buildProd="4500"
+			buildSRes="SR_URANIUM"
+			operWorkers="1000"
+			storEn="9000"
+			prodEn="900"
+			prodEnMod="0.0,0.0,0.0,1.0"
+			maxHP="3500"
+			prodEnv="-36"
+		/>
 	</technology>
 
 	<technology id="2060" symbol="DRYDOCKS" name="DRYDOCKS">
@@ -217,13 +239,31 @@
 			upgradeShip="8"
 			scannerPwr="25"
 			combatAtt="8"
-			structWeapons="2,2,2,0,0"
+			structWeapons="0,2,4,0,0"
 			prodProd="8"
 			prodProdMod="0.0,0.0,0.0,1.0"
 			repairShip="0.02"
 			isMilitary="1"
 		/>
 		<preresearch>An improved version of space docks that provides not only the same services as an orbital space port, but is equipped by scanner and even two best anti-small, anti-medium, and anti-large ship weapons.</preresearch>
+	</technology>
+	<technology id="2062" symbol="COMMSCANCENTER" name="Comm/Scan Center">
+		<discovery
+			researchMod="1.00"
+			level="2"
+			researchRequires="OBSERVATORY-3"
+		/>
+		<structure
+			subtype="str620"
+			buildProd="700"
+			operEn="40"
+			operWorkers="500"
+			scannerPwr="50"
+			maxHP="750"
+			isMilitary="1"
+			fleetSpeedBoost="0.88"
+		/>
+		<preresearch>Communication centre provides direct contact with other planets and also actively scans surrounding space for alien fleets. It also enables our navigators to select faster and safer fly path for ships departuring from or arriving to systems equippend with scanner.</preresearch>
 	</technology>
 
 	<technology id="2070" symbol="MEDIUMHULL" name="Medium Hull">

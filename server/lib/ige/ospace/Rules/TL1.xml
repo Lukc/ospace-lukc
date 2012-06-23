@@ -103,9 +103,26 @@
 			buildProd="350"
 			operWorkers="250"
 			storEn="3600"
-			prodEn="100"
+			prodEn="200"
 			prodEnMod="0.0,0.0,1.0,0.0"
 			maxHP="300"
+		/>
+	</technology>
+	<technology id="1041" symbol="FISSIONPOWERPLANT" name="Fission Power Plant">
+		<discovery
+			researchMod="1.00 + 0.50"
+			level="1"
+		/>
+		<structure
+			subtype="str400"
+			buildProd="2000"
+			buildSRes="SR_URANIUM"
+			operWorkers="1000"
+			storEn="3600"
+			prodEn="400"
+			prodEnMod="0.0,0.0,0.0,1.0"
+			maxHP="1500"
+			prodEnv="-12"
 		/>
 	</technology>
 	<technology id="1050" symbol="RESEARCHLABORATORY" name="Research Laboratory">
