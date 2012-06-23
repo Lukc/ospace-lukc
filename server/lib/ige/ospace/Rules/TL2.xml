@@ -204,6 +204,27 @@
 		/>
 	</technology>
 
+	<technology id="2150" symbol="ORBITALLABCOMPLEX" name="Orbital Lab. Complex">
+		<discovery
+			researchMod="1.00"
+			level="2"
+			researchRequires="RESEARCHLABORATORY-5"
+			researchRaces="H"
+		/>
+		<structure
+			subtype="str500"
+			buildProd="2000"
+			operWorkers="800"
+			operEn="30"
+			prodSci="28"
+			prodSciMod="0.0,0.0,0.5,0.5"
+			prodEnv="0"
+			prodEn="20"
+			prodEnMod="0.0,0.0,1.0,0.0"
+			maxHP="600"
+		/>
+	</technology>
+
 	<technology id="2060" symbol="DRYDOCKS" name="DRYDOCKS">
 		<discovery
 			researchMod="1.00"
