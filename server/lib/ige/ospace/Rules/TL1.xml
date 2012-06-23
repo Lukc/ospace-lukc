@@ -294,7 +294,7 @@
 		<preresearch>A self-deploying module capable of bootstraping the construction of an experimental outpost on another planet.</preresearch>
 	</technology>
 	<!-- —— TL —— -->
-	<technology id="1900" symbol="TL2_M" name="DNA Manipulation">
+	<technology id="1900" symbol="TL2_M" name="Symbiotic Biology">
 		<discovery
 			researchMod="3.00"
 			finishResearchHandler="finishResTLAdvance"
@@ -306,7 +306,7 @@
 		/>
 		<preresearch>TL upgrade.</preresearch>
 	</technology>
-	<technology id="1901" symbol="TL2_H" name="Human Brain Improvements">
+	<technology id="1901" symbol="TL2_H" name="Human Brain Studies">
 		<discovery
 			researchMod="3.00"
 			finishResearchHandler="finishResTLAdvance"
@@ -318,7 +318,7 @@
 		/>
 		<preresearch>TL upgrade.</preresearch>
 	</technology>
-	<technology id="1902" symbol="TL2_C" name="Advanced Robotics">
+	<technology id="1902" symbol="TL2_C" name="Cybernetics">
 		<discovery
 			researchMod="3.00"
 			finishResearchHandler="finishResTLAdvance"

@@ -308,4 +308,38 @@
 		<preresearch>Fighters or bombers are just not powerfull enough to transport pods, or even to carry them. Until such limitation is overcome, new designs of any kind of transporter will be impossible.</preresearch>
 		<description>This civilian hull is relatively weak by military standards, but is strong enough to resist FTL with heavy equipment.</description>
 	</technology>
+
+	<technology id="2900" symbol="TL3_M" name="Ecomanipulation">
+		<discovery
+			researchMod="3.00"
+			finishResearchHandler="finishResTLAdvance"
+			level="2"
+			data="M"
+			recheckWhenTechLost="1"
+			researchRequires="TL2_M-5"
+			researchRaces="M"
+		/>
+	</technology>
+	<technology id="2901" symbol="TL3_H" name="Translinguistics">
+		<discovery
+			researchMod="3.00"
+			finishResearchHandler="finishResTLAdvance"
+			level="2"
+			data="H"
+			recheckWhenTechLost="1"
+			researchRequires="TL2_H-5"
+			researchRaces="H"
+		/>
+	</technology>
+	<technology id="2902" symbol="TL3_C" name="Nanotechnological Cybernetics">
+		<discovery
+			researchMod="3.00"
+			finishResearchHandler="finishResTLAdvance"
+			level="2"
+			data="C"
+			recheckWhenTechLost="1"
+			researchRequires="TL2_C-5"
+			researchRaces="C"
+		/>
+	</technology>
 </techtree>
