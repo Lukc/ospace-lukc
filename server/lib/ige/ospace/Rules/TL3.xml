@@ -1,4 +1,25 @@
 <techtree>
+	<technology id="3300" symbol="CONSUMERGOODSFACTORY" name="Consumer Goods Factory">
+		<discovery
+			researchMod="1.00"
+			level="2"
+			researchRequires="ENTERTAINMENTCENTER-3"
+			researchRaces="C"
+		/>
+		<structure
+			subtype="str120"
+			buildProd="750"
+			operEn="50"
+			operWorkers="500"
+			prodProd="4"
+			prodProdMod="0.0,1.0,0.0,0.0"
+			maxHP="800"
+			moraleTrgt="+18"
+			prodEnv="-3"
+		/>
+		<preresearch>Our factories tend to produce a lot, but our citizens are not always pleased by their products. Building light industries designed to produce goods for our citizens might increase their morale significantly. But a carefully chosen design of those structures should also allow us to get a production bonus from it.</preresearch>
+	</technology>
+
 	<technology id="3140" symbol="SOLARCOLLECTOR" name="Solar Collector">
 		<discovery
 			researchMod="1.0"
