@@ -23,11 +23,11 @@ import random, math, sys
 class GalaxyStats:
 
 	def __init__(self, galaxyID=None):
-		self.activeGalaxy = 'self.circle42P'
+		self.activeGalaxy = self.circle30P
 		self.galaxies = {
 					'Circle4P' : self.circle4P,
 					'Circle9P' : self.circle9P,
-					'Circle42P' : self.circle42P,
+					'Circle30P' : self.circle30P,
 					'Circle65P' : self.circle65P
 		}
 		self.makeStats(galaxyID)
@@ -85,15 +85,13 @@ class GalaxyStats:
 			3 : (5, 9, 6), # TL 3 + 4
 		}
 
-	def circle42P(self):
+	def circle30P(self):
 		self.galaxyMinPlanets = 0
 		self.galaxyMaxPlanets = 99999
 		self.galaxyCenter = (50.0, 50.0)
 		self.galaxyRadius = 50.0
-		self.galaxyStartR = (32.0, 36.0)
-		#galaxyPlayers = 30
-		#galaxyPlayerGroup = 2
-		self.galaxyPlayers = 42
+		self.galaxyStartR = (24.0, 36.0)
+		self.galaxyPlayers = 30
 		self.galaxyPlayerGroup = 3
 		self.galaxyGroupDist = 4.0
 		self.galaxyMinR = 7.5
@@ -112,13 +110,13 @@ class GalaxyStats:
 			8 : (7.5, 45, 15),
 			9  : (7.5, 45, 15),
 			# Last three are rarer resources
-			10 : (7.5, 45, 7),
-			11 : (7.5, 45, 7),
-			12 : (7.5, 45, 7),
+			10 : (7.5, 40, 7),
+			11 : (7.5, 40, 7),
+			12 : (7.5, 40, 7),
 		}
 		self.galaxyDiseases = {
 			# format diseaseID : (minDist, maxDist, number of diseases)
-			# No disease in my world! :)
+			# No disease in my galaxy! :)
 		}	
 
 	# FIXME: Broken.
@@ -764,9 +762,10 @@ def loadSystemNames():
 def GenerateGalaxy(galaxyID, fh):
 	galaxy = generateGalaxy2(galaxyID)
 	step = 0
+	# FIXME: minShift and maxShift should be in Rules/ or in Const.py.
 	while step < 25:
-		min, max = shiftSystems(galaxy, 1.5, 5.0, 0.25)
-		if min >= 1.0 and max <= 5.0:
+		min, max = shiftSystems(galaxy, 0.75, 6.5, 0.25)
+		if min >= 0.75 and max <= 6.5:
 			break
 		step += 1
 	print fh
