@@ -353,18 +353,18 @@ class IGalaxy(IObject):
 			planet.morale = Rules.maxMorale
 			# fleet
 			# add basic ships designs
-			tempTechs = [Tech.FTLENGINE, Tech.COCKPIT, Tech.SCANNERMOD, Tech.CANNON,
-				Tech.SMALLHULL, Tech.MEDIUMHULL, Tech.COLONYMODULE]
+			tempTechs = [Tech.FTLMICROENGINE, Tech.COCKPIT, Tech.OPTICALSCANNER, Tech.CANNON,
+				Tech.SMALLHULL, Tech.MEDIUMHULL, Tech.PRIMITIVECOLONYMODULE]
 			for techID in tempTechs:
 				player.techs[techID] = 1
-			dummy, scoutID = tran.gameMngr.cmdPool[T_AIPLAYER].addShipDesign(tran, player, "Scout", Tech.SMALLHULL1,
+			dummy, scoutID = tran.gameMngr.cmdPool[T_AIPLAYER].addShipDesign(tran, player, "Scout", Tech.SMALLHULL,
 				{Tech.FTLMICROENGINE:3, Tech.COCKPIT:1, Tech.OPTICALSCANNER:1})
-			dummy, fighterID = tran.gameMngr.cmdPool[T_AIPLAYER].addShipDesign(tran, player, "Fighter", Tech.SMALLHULL1,
+			dummy, fighterID = tran.gameMngr.cmdPool[T_AIPLAYER].addShipDesign(tran, player, "Fighter", Tech.SMALLHULL,
 				{Tech.FTLMICROENGINE:3, Tech.COCKPIT:1, Tech.CANNON:1})
 		#	dummy, bomberID = tran.gameMngr.cmdPool[T_AIPLAYER].addShipDesign(tran, player, "Bomber", Tech.SMALLHULL1,
 		#		{Tech.FTLENG1:3, Tech.SCOCKPIT1:1, Tech.CONBOMB1:1})
-			dummy, colonyID = tran.gameMngr.cmdPool[T_AIPLAYER].addShipDesign(tran, player, "Colony Ship", Tech.MEDIUMHULL2,
-				{Tech.FTLMICROENGINE:4, Tech.COCKPIT:1, Tech.COLONYMODULE:1})
+			dummy, colonyID = tran.gameMngr.cmdPool[T_AIPLAYER].addShipDesign(tran, player, "Colony Shuttle", Tech.SMALLHULL,
+				{Tech.FTLMICROENGINE:1, Tech.COCKPIT:1, Tech.PRIMITIVECOLONYMODULE:1})
 			for techID in tempTechs:
 				del player.techs[techID]
 			# add small fleet

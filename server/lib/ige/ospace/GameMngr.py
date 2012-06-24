@@ -323,14 +323,12 @@ class GameMngr(IGEGameMngr):
 		#	Tech.CONBOMB1, Tech.SMALLHULL1, Tech.MEDIUMHULL2, Tech.COLONYMOD2]
 		for techID in tempTechs:
 			player.techs[techID] = 1
-		dummy, scoutID = self.cmdPool[T_PLAYER].addShipDesign(tran, player, "Scout", Tech.SMALLHULL,
+		dummy, scoutID = tran.gameMngr.cmdPool[T_AIPLAYER].addShipDesign(tran, player, "Scout", Tech.SMALLHULL,
 			{Tech.FTLMICROENGINE:3, Tech.COCKPIT:1, Tech.OPTICALSCANNER:1})
-		dummy, fighterID = self.cmdPool[T_PLAYER].addShipDesign(tran, player, "Fighter", Tech.SMALLHULL,
+		dummy, fighterID = tran.gameMngr.cmdPool[T_AIPLAYER].addShipDesign(tran, player, "Fighter", Tech.SMALLHULL,
 			{Tech.FTLMICROENGINE:3, Tech.COCKPIT:1, Tech.CANNON:1})
-		#dummy, bomberID = self.cmdPool[T_PLAYER].addShipDesign(tran, player, "Bomber", Tech.SMALLHULL1,
-		#	{Tech.FTLENG1:3, Tech.SCOCKPIT1:1, Tech.CONBOMB1:1})
-		dummy, colonyID = self.cmdPool[T_PLAYER].addShipDesign(tran, player, "Prototype Colony Ship", Tech.MEDIUMHULL,
-			{Tech.FTLMICROENGINE:4, Tech.COCKPIT:1, Tech.PRIMITIVECOLONYMODULE:1})
+		dummy, colonyID = tran.gameMngr.cmdPool[T_AIPLAYER].addShipDesign(tran, player, "Colony Shuttle", Tech.SMALLHULL,
+			{Tech.FTLMICROENGINE:1, Tech.COCKPIT:1, Tech.PRIMITIVECOLONYMODULE:1})
 		for techID in tempTechs:
 			del player.techs[techID]
 		# add small fleet
