@@ -1,8 +1,26 @@
 <techtree>
+	<technology id="3200" symbol="GARDENS" name="Gardens">
+		<discovery
+			researchMod="1.00"
+			level="3"
+			researchRequires="ENTERTAINMENTCENTER-3"
+			researchRaces="M"
+		/>
+		<structure
+			subtype="str120"
+			buildProd="1000"
+			operEn="25"
+			operWorkers="500"
+			prodBio="40"
+			prodBioMod="1.0,0.0,0.0,0.0"
+			maxHP="400"
+			moraleTrgt="+18"
+		/>
+	</technology>
 	<technology id="3300" symbol="CONSUMERGOODSFACTORY" name="Consumer Goods Factory">
 		<discovery
 			researchMod="1.00"
-			level="2"
+			level="3"
 			researchRequires="ENTERTAINMENTCENTER-3"
 			researchRaces="C"
 		/>
