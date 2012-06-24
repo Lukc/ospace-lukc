@@ -43,6 +43,23 @@
 		/>
 	</technology>
 
+	<technology id="2200" symbol="TERRAFORMINGOUTPOST" name="Terraforming Outpost">
+		<discovery
+			researchMod="1.00"
+			level="2"
+			researchRequires="PRIMITIVEOUTPOST-5"
+			researchRaces="HM"
+		/>
+		<structure
+			subtype="str250"
+			buildProd="2500"
+			operWorkers="1000"
+			operEn="25"
+			maxHP="700"
+			prodEnv="+40"
+		/>
+	</technology>
+
 	<technology id="2120" symbol="GREENHOUSEFARM" name="Greenhouse Farm">
 		<discovery
 			researchMod="1.00"
