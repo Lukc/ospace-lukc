@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <techtree>
 	<technology id="2000" symbol="OUTPOST" name="Outpost">
-		<starting/>
 		<discovery
 			researchMod="1.00"
 			level="2"
