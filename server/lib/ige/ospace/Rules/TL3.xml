@@ -56,4 +56,45 @@
 		/>
 		<preresearch>Concentrating solar rays into a localized point on a ground structure permits the usage of more efficient conversion techniques than solar cells.</preresearch>
 	</technology>
+
+	<technology id="3070" symbol="LARGEHULL" name="Large Hull">
+		<discovery
+			researchMod="1.00 + 0.50 + 0.50 + 1.00"
+			level="2"
+			researchRequires="MEDIUMHULL-3"
+		/>
+		<shiphull
+			buildProd="1920"
+			buildSRes="SR_IRIDIUM,SR_TITANIUM,SR_CHROMIUM"
+			storEn="1644"
+			operEn="32"
+			maxHP="1200"
+			slots="128"
+			weight="128"
+			maxWeight="720"
+			signature="25"
+			minSignature="10"
+			combatClass="2"
+		/>
+	</technology>
+	<technology id="3170" symbol="XENONFTLENGINE" name="Xenon FTL Engine">
+		<discovery
+			researchMod="1.00 + 0.50 + 1.00"
+			level="2"
+			researchRequires="FTLENGINE-3"
+			researchRaces="HC"
+		/>
+		<shipequip
+			subtype="seq_eng"
+			buildProd="480"
+			buildSRes="SR_URANIUM,SR_XENON"
+			storEn="192"
+			operEn="2"
+			slots="6"
+			weight="6"
+			engPwr="128"
+			signature="0"
+			minHull="2"
+		/>
+	</technology>
 </techtree>

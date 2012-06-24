@@ -201,7 +201,7 @@
 		<discovery
 			researchMod="1.00 + 0.50"
 			level="1"
-			researchRequires="FISSIONPOWERPLANT"
+			researchRequires="FISSIONPOWERPLANT-5"
 			researchRaces="C"
 		/>
 		<!-- A bit overpowered but, well, it is an underground structure, it is
@@ -305,12 +305,13 @@
 
 	<technology id="2070" symbol="MEDIUMHULL" name="Medium Hull">
 		<discovery
-			researchMod="1.00 + 1.00"
+			researchMod="1.00 + 0.50"
 			level="2"
 			researchRequires="SMALLHULL-3"
 		/>
 		<shiphull
 			buildProd="240"
+			buildSRes="SR_IRIDIUM"
 			storEn="768"
 			operEn="4"
 			maxHP="46"
@@ -321,8 +322,50 @@
 			minSignature="3"
 			combatClass="1"
 		/>
-		<preresearch>Fighters or bombers are just not powerfull enough to transport pods, or even to carry them. Until such limitation is overcome, new designs of any kind of transporter will be impossible.</preresearch>
-		<description>This civilian hull is relatively weak by military standards, but is strong enough to resist FTL with heavy equipment.</description>
+		<preresearch>Fighters or bombers are not powerfull enough to transport normal pods, or even to carry them. This hull provides the ability to transport such pods in the case of a transporter, or permits the construction of more autonomous and durable battleships.</preresearch>
+	</technology>
+	<technology id="2170" symbol="FTLENGINE" name="FTL Engine">
+		<discovery
+			researchMod="1.00 + 1.00"
+			level="2"
+			researchRequires="FTLMICROENGINE-3"
+			researchRaces="HC"
+		/>
+		<shipequip
+			subtype="seq_eng"
+			buildProd="240"
+			buildSRes="SR_URANIUM"
+			storEn="96"
+			operEn="1"
+			slots="4"
+			weight="4"
+			engPwr="64"
+			signature="0"
+			minHull="1"
+		/>
+		<preresearch>A FTL engine powerfull enough to move average-size ships at distortion speeds. Too heavy to be used on a fighter, and probably not powerfull enough to be used on a cruiser.</preresearch>
+	</technology>
+	<technology id="2270" symbol="FTLBIOENGINE" name="FTL BioEngine">
+		<discovery
+			researchMod="1.00 + 1.00"
+			level="2"
+			researchRequires="FTLMICROENGINE-3"
+			researchRaces="M"
+		/>
+		<!-- Less powerful, stores more fuel. -->
+		<shipequip
+			subtype="seq_eng"
+			buildProd="240"
+			buildSRes="SR_GYPSUM,SR_XENON"
+			storEn="144"
+			operEn="1"
+			slots="4"
+			weight="4"
+			engPwr="48"
+			signature="0"
+			minHull="1"
+		/>
+		<preresearch>A biological FTL engine powerfull enough to move average-size ships at distortion speeds. Too heavy to be used on a fighter, and probably not powerfull enough to be used on a cruiser.</preresearch>
 	</technology>
 
 	<technology id="2900" symbol="TL3_M" name="Ecomanipulation">

@@ -18,6 +18,7 @@
 			finishConstrHandler="finishStructGOVCENTER"
 			isMilitary="1"
 		/>
+	</technology>
 	<technology id="1001" symbol="OBSERVATORY" name="Observatory">
 		<discovery
 			researchMod="1.00"
@@ -187,15 +188,17 @@
 			level="1"
 			researchRequires="SMALLHULL-1"
 		/>
+		<!-- Very fast, but without much autonomy -->
 		<shipequip
 			subtype="seq_eng"
 			buildProd="240"
-			storEn="96"
+			storEn="24"
 			operEn="2"
 			slots="4"
 			weight="4"
 			engPwr="80"
 			signature="0"
+			maxHull="0"
 		/>
 		<preresearch>A minimalistic FTL engine. Very usefull to move fighters, is is essentially useless on anything bigger.</preresearch>
 	</technology>
@@ -271,13 +274,13 @@
 			weaponROF="1"
 			weaponIgnoreShield="1"
 		/>
-		<preresearch>A projectile weapon. In space, explosives are very difficult to use for many reasons. The use of kinetic projectiles is then the most effective solution available with this technological level.</preresearch>
+		<preresearch>A projectile weapon. In space, explosives are very difficult to use for many reasons. The use of kinetic projectiles is then the most effective solution available at this time.</preresearch>
 	</technology>
 	<technology id="1090" symbol="PRIMITIVECOLONYMODULE" name="Primitive Colony Module">
 		<discovery
 			researchMod="1.00 + 0.50"
 			level="2"
-			researchRequires="OUTPOST1-3"
+			researchRequires="OUTPOST-3"
 		/>
 		<shipequip
 			subtype="seq_struct"
@@ -289,12 +292,13 @@
 			slots="8"
 			weight="20"
 			unpackStruct="PRIMITIVEOUTPOST"
-			minHull="1"
+			minHull="0"
+			maxHull="1"
 		/>
-		<preresearch>A self-deploying module capable of bootstraping the construction of an experimental outpost on another planet.</preresearch>
+		<preresearch>A self-deploying module capable of bootstraping the construction of an experimental outpost on another planet. This module is made to be as small as possible for a shuttle to be able to carry it.</preresearch>
 	</technology>
-	<!-- —— TL —— -->
-	<technology id="1900" symbol="TL2_M" name="Symbiotic Biology">
+	<!-- —— TL (from 1904 to avoid conflicts with Asteroids) —— -->
+	<technology id="1904" symbol="TL2_M" name="Symbiotic Biology">
 		<discovery
 			researchMod="3.00"
 			finishResearchHandler="finishResTLAdvance"
@@ -306,7 +310,7 @@
 		/>
 		<preresearch>TL upgrade.</preresearch>
 	</technology>
-	<technology id="1901" symbol="TL2_H" name="Human Brain Studies">
+	<technology id="1905" symbol="TL2_H" name="Human Brain Studies">
 		<discovery
 			researchMod="3.00"
 			finishResearchHandler="finishResTLAdvance"
@@ -318,7 +322,7 @@
 		/>
 		<preresearch>TL upgrade.</preresearch>
 	</technology>
-	<technology id="1902" symbol="TL2_C" name="Cybernetics">
+	<technology id="1906" symbol="TL2_C" name="Cybernetics">
 		<discovery
 			researchMod="3.00"
 			finishResearchHandler="finishResTLAdvance"
