@@ -31,7 +31,6 @@
 		<discovery
 			researchMod="1.00"
 			level="2"
-			researchRequires="ADMINISTRATIONCENTER-3"
 			researchRaces="H"
 		/>
 		<structure
