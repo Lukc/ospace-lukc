@@ -1,0 +1,20 @@
+<techtree>
+	<technology id="3140" symbol="SOLARCOLLECTOR" name="Solar Collector">
+		<discovery
+			researchMod="1.0"
+			level="3"
+			researchRequires="SOLARREFLECTOR-5"
+			researchRaces="H"
+		/>
+		<structure
+			subtype="str400"
+			buildProd="2000"
+			operWorkers="1000"
+			storEn="7500"
+			prodEn="1000"
+			prodEnMod="0.0,0.0,1.0,0.0"
+			maxHP="500"
+		/>
+		<preresearch>Concentrating solar rays into a localized point on a ground structure permits the usage of more efficient conversion techniques than solar cells.</preresearch>
+	</technology>
+</techtree>

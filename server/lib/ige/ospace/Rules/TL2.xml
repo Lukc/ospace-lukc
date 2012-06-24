@@ -178,7 +178,7 @@
 			prodEnMod="0.0,0.0,1.0,0.0"
 			maxHP="400"
 		/>
-		<preresearch>An orbital structure to reflect an important part of the star’s light on a specialized structure on the ground produces much more energy than the traditionnal solar farms.</preresearch>
+		<preresearch>An orbital platform to reflect a part of the star’s light on a specialized structure on the ground produces much more energy than the traditionnal solar farms.</preresearch>
 	</technology>
 	<technology id="2340" symbol="FISSIONCOMPLEX" name="Fission Complex">
 		<discovery
