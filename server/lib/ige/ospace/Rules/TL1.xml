@@ -247,6 +247,7 @@
 			subtype="seq_mod"
 			equipType="ECM"
 			buildProd="240"
+			buildSRes="SR_GYPSUM"
 			slots="1"
 			weight="1"
 			combatDef="10"
