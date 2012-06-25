@@ -180,7 +180,7 @@
 
 	<technology id="2140" symbol="SOLARREFLECTOR" name="Solar Reflector">
 		<discovery
-			researchMod="1.0"
+			researchMod="1.00"
 			level="2"
 			researchRequires="SOLARPOWERPLANT-5"
 			researchRaces="H"
@@ -195,6 +195,23 @@
 			maxHP="400"
 		/>
 		<preresearch>An orbital platform to reflect a part of the star’s light on a specialized structure on the ground produces much more energy than the traditionnal solar farms.</preresearch>
+	</technology>
+	<technology id="2240" symbol="BIOPHOTOSYNTHESISPOWERPLANT" name="Biophotosynthesis Power Plant">
+		<discovery
+			researchMod="1.00"
+			level="2"
+			researchRequires="SOLARPOWERPLANT-5"
+			researchRaces="M"
+		/>
+		<structure
+			subtype="str400"
+			buildProd="1500"
+			operWorkers="500"
+			storEn="5000"
+			prodEn="550"
+			prodEnMod="0.0,0.0,1.0,0.0"
+			maxHP="700"
+		/>
 	</technology>
 	<technology id="2340" symbol="FISSIONCOMPLEX" name="Fission Complex">
 		<discovery
