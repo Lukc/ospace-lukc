@@ -326,7 +326,7 @@
 	<technology id="2071" symbol="ACTIVESCANNER" name="Active Scanner">
 		<discovery
 			researchMod="1.00 + 1.00"
-			level="1"
+			level="2"
 			researchRequires="OPTICALSCANNER-3"
 		/>
 		<shipequip
@@ -342,7 +342,7 @@
 	<technology id="2072" symbol="PASSIVESCANNER" name="Passive Scanner">
 		<discovery
 			researchMod="1.00 + 1.00"
-			level="1"
+			level="2"
 			researchRequires="OPTICALSCANNER-3"
 		/>
 		<shipequip
@@ -401,7 +401,7 @@
 	<technology id="2171" symbol="LONGRANGEECM" name="Long Range ECM">
 		<discovery
 			researchMod="1.00 + 0.50"
-			level="1"
+			level="2"
 			researchRequires="ECMMODULE-5"
 			researchRaces="HC"
 		/>
