@@ -366,6 +366,25 @@
 		/>
 		<preresearch>A biological FTL engine powerfull enough to move average-size ships at distortion speeds. Too heavy to be used on a fighter, and probably not powerfull enough to be used on a cruiser.</preresearch>
 	</technology>
+	<technology id="2171" symbol="LONGRANGEECM" name="Long Range ECM">
+		<discovery
+			researchMod="1.00 + 0.50"
+			level="1"
+			researchRequires="ECMMODULE-5"
+			researchRaces="HC"
+		/>
+		<shipequip
+			subtype="seq_mod"
+			equipType="ECM"
+			buildProd="480"
+			buildSRes="SR_GYPSUM,SR_IRIDIUM"
+			slots="2"
+			weight="2"
+			combatDef="22"
+			missileDef="22"
+			minHull="0"
+		/>
+	</technology>
 
 	<technology id="2180" symbol="RAILGUN" name="Railgun">
 		<discovery
