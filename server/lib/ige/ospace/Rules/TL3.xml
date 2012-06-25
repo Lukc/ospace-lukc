@@ -97,4 +97,24 @@
 			minHull="2"
 		/>
 	</technology>
+	<technology id="3370" symbol="PLUTONIUMFTLENGINE" name="Plutonium FTL Engine">
+		<discovery
+			researchMod="1.00 + 1.00"
+			level="3"
+			researchRequires="FTLENGINE-3"
+			researchRaces="C"
+		/>
+		<shipequip
+			subtype="seq_eng"
+			buildProd="480"
+			buildSRes="SR_URANIUM,SR_PLUTONIUM"
+			storEn="192"
+			operEn="3"
+			slots="7"
+			weight="7"
+			engPwr="160"
+			signature="1"
+			minHull="1"
+		/>
+	</technology>
 </techtree>
