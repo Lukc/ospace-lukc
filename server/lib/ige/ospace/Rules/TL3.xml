@@ -38,6 +38,26 @@
 		<preresearch>Our factories tend to produce a lot, but our citizens are not always pleased by their products. Building light industries designed to produce goods for our citizens might increase their morale significantly. But a carefully chosen design of those structures should also allow us to get a production bonus from it.</preresearch>
 	</technology>
 
+	<technology id="3220" symbol="SUBTERRANEANFARM" name="Subterranean Farm">
+		<discovery
+			researchMod="1.00 + 0.25"
+			level="6"
+			researchRequires="PERMACULTURALFARM-3"
+			researchRaces="B"
+		/>
+		<structure
+			subtype="str200"
+			buildProd="2500"
+			buildSRes="SR_MUTAGEN"
+			operWorkers="1600"
+			prodBio="500"
+			prodBioMod="0.0,0.0,0.0,1.0"
+			storBio="10000"
+			prodEnv="+22"
+			maxHP="1800"
+		/>
+	</technology>
+
 	<technology id="3140" symbol="SOLARCOLLECTOR" name="Solar Collector">
 		<discovery
 			researchMod="1.0"
