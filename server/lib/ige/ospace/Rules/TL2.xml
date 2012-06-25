@@ -367,6 +367,68 @@
 		<preresearch>A biological FTL engine powerfull enough to move average-size ships at distortion speeds. Too heavy to be used on a fighter, and probably not powerfull enough to be used on a cruiser.</preresearch>
 	</technology>
 
+	<technology id="2180" symbol="RAILGUN" name="Railgun">
+		<discovery
+			researchMod="1.00 + 1.00 + 0.50"
+			level="1"
+			researchRequires="CANNON-5"
+		/>
+		<shipequip
+			subtype="seq_wpn"
+			slots="2"
+			weight="4"
+			buildProd="480"
+			buildSRes="SR_IRIDIUM"
+			weaponDmgMin="6"
+			weaponDmgMax="12"
+			weaponAtt="8"
+			weaponClass="0"
+			weaponROF="1"
+			weaponIgnoreShield="1"
+		/>
+	</technology>
+	<technology id="2280" symbol="NEEDLESGUN" name="Needles Gun">
+		<discovery
+			researchMod="1.00 + 1.00 + 0.50"
+			level="1"
+			researchRequires="CANNON-5"
+			researchRaces="M"
+		/>
+		<shipequip
+			subtype="seq_wpn"
+			slots="1"
+			weight="3"
+			buildProd="480"
+			buildSRes="SR_TITANIUM"
+			weaponDmgMin="6"
+			weaponDmgMax="7"
+			weaponAtt="8"
+			weaponClass="0"
+			weaponROF="1"
+			weaponIgnoreShield="1"
+		/>
+	</technology>
+	<technology id="2380" symbol="GAUSSGUN" name="Gauss Gun">
+		<discovery
+			researchMod="1.00 + 1.00 + 0.5 + 0.5"
+			level="1"
+			researchRequires="CANNON-5"
+		/>
+		<!-- To imprecise to target fighters. A good tool against frigates, tho. -->
+		<shipequip
+			subtype="seq_wpn"
+			slots="4"
+			weight="20"
+			buildProd="720"
+			weaponDmgMin="24"
+			weaponDmgMax="32"
+			weaponAtt="6"
+			weaponClass="1"
+			weaponROF="0.5"
+			weaponIgnoreShield="1"
+		/>
+	</technology>
+
 	<technology id="2900" symbol="TL3_M" name="Ecomanipulation">
 		<discovery
 			researchMod="3.00"
