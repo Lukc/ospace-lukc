@@ -418,6 +418,25 @@
 		/>
 	</technology>
 
+	<technology id="2080" symbol="FISSIONBOMB" name="Fission Bomb">
+		<discovery
+			researchMod="1.00 + 1.00 + 0.50"
+			level="2"
+		/>
+		<shipequip
+			subtype="seq_wpn"
+			slots="2"
+			weight="7"
+			buildProd="960"
+			buildSRes="SR_URANIUM"
+			weaponDmgMin="300"
+			weaponDmgMax="400"
+			weaponAtt="4"
+			weaponClass="2"
+			weaponROF="0.5"
+		/>
+		<preresearch>Atomic Bomb - dirty but very effective way of wiping out of the enemies out of the planet's surface.</preresearch>
+	</technology>
 	<technology id="2180" symbol="RAILGUN" name="Railgun">
 		<discovery
 			researchMod="1.00 + 1.00 + 0.50"
