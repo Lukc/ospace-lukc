@@ -25,6 +25,7 @@ Engine                  +150 %
 Other Ship Technology   +100 %
 ——————————————————————————————————————————————————————————————————————————————
 SR involved:
+ | Produced             +25 %
  | Common               +50 %
  | Uncommon            +100 %
  | Rare                +150 %
