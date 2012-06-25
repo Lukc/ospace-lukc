@@ -592,9 +592,6 @@ def generatePlanet(zone, planet):
 	elif planet.type == 'C': planet.slots = int(planet.maxSlots * 0.75)
 	elif planet.type == 'R': planet.slots = int(planet.maxSlots * 0.75)
 	else: planet.slots = 0
-	# moons
-	planet.plMaxMoonsSlots = int(planet.maxSlots * 0.25)
-	planet.plMoonsSlots = int(planet.maxSlots * 0.1)
 	# make sure that all planets except A and G has at least one slot
 	if planet.type in "EMHDCR" and planet.slots == 0:
 		#@print "Fixing slots", planet.type, planet.slots, planet.maxSlots
