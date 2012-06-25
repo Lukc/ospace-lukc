@@ -471,6 +471,7 @@
 			slots="4"
 			weight="20"
 			buildProd="720"
+			buildSRes="SR_TITANIUM,SR_IRIDIUM"
 			weaponDmgMin="24"
 			weaponDmgMax="32"
 			weaponAtt="6"
