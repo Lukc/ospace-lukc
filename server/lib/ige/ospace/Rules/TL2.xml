@@ -417,6 +417,23 @@
 			minHull="0"
 		/>
 	</technology>
+	<technology id="2172" symbol="DAMAGECONTROLTEAMS" name="Damage Control Teams">
+		<discovery
+			researchMod="1.00 + 1.00 + 0.50"
+			level="2"
+			researchRaces="HCM"
+		/>
+		<shipequip
+			subtype="seq_mod"
+			equipType="Auto Repair"
+			buildProd="640"
+			autoRepairFix="1"
+			slots="6"
+			weight="4"
+			operEn="12"
+			minHull="1"
+		/>
+	</technology>
 
 	<technology id="2080" symbol="FISSIONBOMB" name="Fission Bomb">
 		<discovery
