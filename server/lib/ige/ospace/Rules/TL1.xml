@@ -252,7 +252,6 @@
 			combatDef="10"
 			missileDef="10"
 			minHull="0"
-			maxInstallations="1"
 		/>
 		<preresearch>Electronic Counter Measure module greatly reduces the chance to be hit by self-guided weapons like missiles or torpedoes. ECMs also affect the enemy targeting systems.</preresearch>
 	</technology>
