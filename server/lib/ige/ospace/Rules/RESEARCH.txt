@@ -20,17 +20,14 @@ Military Technology      +50 %            Military technologies include only
                                           weapons, shields, ECM modules,
                                           military structures and stealth
                                           modules.
-Hull                     +50 %
-Engine                   +50 %
+Hull                    +150 %
+Engine                  +150 %
 Other Ship Technology   +100 %
 ——————————————————————————————————————————————————————————————————————————————
-SR required to develop:
+SR involved:
  | Common               +50 %
  | Uncommon            +100 %
  | Rare                +150 %
-SR required to build:  + 50 %             The rarity of the resource is
-                                          unimportant if not required to
-                                          develop.
 ——————————————————————————————————————————————————————————————————————————————
 
 IDs:
