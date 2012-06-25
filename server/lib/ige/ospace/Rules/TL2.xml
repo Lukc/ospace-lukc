@@ -323,6 +323,38 @@
 		/>
 		<preresearch>Fighters or bombers are not powerfull enough to transport normal pods, or even to carry them. This hull provides the ability to transport such pods in the case of a transporter, or permits the construction of more autonomous and durable battleships.</preresearch>
 	</technology>
+	<technology id="2071" symbol="ACTIVESCANNER" name="Active Scanner">
+		<discovery
+			researchMod="1.00 + 1.00"
+			level="1"
+			researchRequires="OPTICALSCANNER-3"
+		/>
+		<shipequip
+			subtype="seq_mod"
+			buildProd="240"
+			slots="2"
+			weight="2"
+			scannerPwr="75"
+			signature="12"
+			maxInstallations="1"
+		/>
+	</technology>
+	<technology id="2072" symbol="PASSIVESCANNER" name="Passive Scanner">
+		<discovery
+			researchMod="1.00 + 1.00"
+			level="1"
+			researchRequires="OPTICALSCANNER-3"
+		/>
+		<shipequip
+			subtype="seq_mod"
+			buildProd="240"
+			slots="2"
+			weight="2"
+			scannerPwr="60"
+			signature="-1"
+			maxInstallations="1"
+		/>
+	</technology>
 	<technology id="2170" symbol="FTLENGINE" name="FTL Engine">
 		<discovery
 			researchMod="1.00 + 1.00"
