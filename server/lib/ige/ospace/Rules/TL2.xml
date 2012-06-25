@@ -304,7 +304,7 @@
 
 	<technology id="2070" symbol="MEDIUMHULL" name="Medium Hull">
 		<discovery
-			researchMod="1.00 + 0.50"
+			researchMod="1.00 + 1.50"
 			level="2"
 			researchRequires="SMALLHULL-3"
 		/>
