@@ -66,42 +66,42 @@ planetSpec[u'C'] = makeIDataHolder(
 	minBio = 0,
 	maxBio = 6,
 	upgradeTo = u'D',
-	upgradeEnReqs = (5, 180),
+	upgradeEnReqs = (5, 200),
 	downgradeTo = None,
 )
 planetSpec[u'R'] = makeIDataHolder(
 	minBio = 0,
 	maxBio = 6,
 	upgradeTo = u'D',
-	upgradeEnReqs = (5, 180),
+	upgradeEnReqs = (0, 195),
 	downgradeTo = None,
 )
 planetSpec[u'D'] = makeIDataHolder(
 	minBio = 6,
 	maxBio = 12,
 	upgradeTo = u'H',
-	upgradeEnReqs = (25, 150),
+	upgradeEnReqs = (10, 190),
 	downgradeTo = u'R',
 )
 planetSpec[u'H'] = makeIDataHolder(
 	minBio = 12,
 	maxBio = 25,
 	upgradeTo = u'M',
-	upgradeEnReqs = (50, 125),
+	upgradeEnReqs = (25, 175),
 	downgradeTo = u'D',
 )
 planetSpec[u'M'] = makeIDataHolder(
 	minBio = 25,
 	maxBio = 75,
 	upgradeTo = u'E',
-	upgradeEnReqs = (50, 100),
+	upgradeEnReqs = (50, 150),
 	downgradeTo = u'H',
 )
 planetSpec[u'E'] = makeIDataHolder(
 	minBio = 75,
 	maxBio = 125,
 	upgradeTo = u"I",
-	upgradeEnReqs = (50, 100),
+	upgradeEnReqs = (75, 125),
 	downgradeTo = u'M',
 )
 planetSpec[u"I"] = makeIDataHolder( # gaia
@@ -112,9 +112,9 @@ planetSpec[u"I"] = makeIDataHolder( # gaia
 )
 planetSpec[u"X"] = makeIDataHolder( # replicators
 	minBio = 0,
-	maxBio = 20,
+	maxBio = 25,
 	upgradeTo = u"H",
-	upgradeEnReqs = (50, 125),
+	upgradeEnReqs = (0, 200),
 	downgradeTo = None,
 )
 
