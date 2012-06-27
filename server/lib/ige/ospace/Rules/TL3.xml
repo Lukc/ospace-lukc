@@ -81,7 +81,7 @@
 			researchMod="1.0"
 			level="3"
 			researchRequires="BIOPHOTOSYNTHESISPOWERPLANT-3"
-			researchRaces="H"
+			researchRaces="M"
 		/>
 		<structure
 			subtype="str400"
@@ -90,6 +90,24 @@
 			storEn="15000"
 			prodEn="800"
 			prodEnMod="0.5,0.5,0.0,0.0"
+			maxHP="800"
+		/>
+	</technology>
+	<!-- FIXME: Not very different from 3240? -->
+	<technology id="3241" symbol="BIOLOGICALTHERMALPOWERPLANT" name="Biological Thermal Power Plant">
+		<discovery
+			researchMod="1.0"
+			level="3"
+			researchRequires="BIOPHOTOSYNTHESISPOWERPLANT-5"
+			researchRaces="M"
+		/>
+		<structure
+			subtype="str400"
+			buildProd="1200"
+			operWorkers="800"
+			storEn="7500"
+			prodEn="900"
+			prodEnMod="1.0,0.0,0.0,0.0"
 			maxHP="800"
 		/>
 	</technology>
