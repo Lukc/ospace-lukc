@@ -71,12 +71,12 @@
 			buildProd="800"
 			operWorkers="700"
 			prodBio="200"
-			prodBioMod="0.0,0.0,0.5,0.5"
+			prodBioMod="0.5,0.0,0.5,0.0"
 			storBio="3000"
 			maxHP="500"
 			prodEnv="+3"
 		/>
-		<preresearch>Greenhouse Farms are a good source of food depending only on the planet’s received solar energy.</preresearch>
+		<preresearch>Greenhouse Farms are a good source of food depending more on the planet’s received solar energy and less on the environment.</preresearch>
 	</technology>
 	<technology id="2220" symbol="PERMACULTURALFARM" name="Permacultural Farm">
 		<discovery
@@ -90,7 +90,7 @@
 			buildProd="1000"
 			operWorkers="900"
 			prodBio="250"
-			prodBioMod="0.5,0.0,0.0,0.5"
+			prodBioMod="1.0,0.0,0.0,0.0"
 			storBio="500"
 			maxHP="600"
 			prodEnv="+15"
@@ -110,7 +110,7 @@
 			operWorkers="500"
 			operEn="15"
 			prodBio="190"
-			prodBioMod="0.0,0.5,0.0,0.5"
+			prodBioMod="0.0,1.0,0.0,0.0"
 			storBio="2000"
 			maxHP="1200"
 			prodEnv="-2"
@@ -131,7 +131,7 @@
 			operWorkers="600"
 			operEn="30"
 			prodProd="14"
-			prodProdMod="0.0,0.4,0.6,0.0"
+			prodProdMod="0.0,0.5,0.5,0.0"
 			prodEnv="0"
 			prodEn="20"
 			prodEnMod="0.0,0.0,1.0,0.0"
@@ -152,7 +152,7 @@
 			operBio="10"
 			operWorkers="700"
 			prodProd="20"
-			prodProdMod="0.6,0.4,0.0,0.0"
+			prodProdMod="0.5,0.5,0.0,0.0"
 			prodEnv="+2"
 			maxHP="800"
 		/>
