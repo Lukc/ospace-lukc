@@ -51,7 +51,7 @@
 			buildSRes="SR_MUTAGEN"
 			operWorkers="1600"
 			prodBio="500"
-			prodBioMod="0.0,0.0,0.0,1.0"
+			prodBioMod="0.0,1.0,0.0,0.0"
 			storBio="10000"
 			prodEnv="+22"
 			maxHP="1800"
@@ -75,6 +75,23 @@
 			maxHP="500"
 		/>
 		<preresearch>Concentrating solar rays into a localized point on a ground structure permits the usage of more efficient conversion techniques than solar cells.</preresearch>
+	</technology>
+	<technology id="3240" symbol="BIOCHEMICALPOWERPLANT" name="Biochemical Power Plant">
+		<discovery
+			researchMod="1.0"
+			level="3"
+			researchRequires="BIOPHOTOSYNTHESISPOWERPLANT-3"
+			researchRaces="H"
+		/>
+		<structure
+			subtype="str400"
+			buildProd="1500"
+			operWorkers="700"
+			storEn="15000"
+			prodEn="800"
+			prodEnMod="0.5,0.5,0.0,0.0"
+			maxHP="800"
+		/>
 	</technology>
 
 	<technology id="3070" symbol="LARGEHULL" name="Large Hull">
