@@ -51,7 +51,7 @@
 			buildSRes="SR_MUTAGEN"
 			operWorkers="1600"
 			prodBio="500"
-			prodBioMod="0.0,1.0,0.0,0.0"
+			prodBioMod="0.0,0.5,0.0,0.5"
 			storBio="10000"
 			prodEnv="+22"
 			maxHP="1800"
